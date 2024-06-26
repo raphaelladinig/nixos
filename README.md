@@ -23,8 +23,10 @@ Generate your hardware.nix:
 nixos-generate-config --show-hardware-config > hosts/<your-desired-hostname>/hardware.nix
 ```
 
+Change variables.nix to your preferences
+
 Run this to enable flakes and install the flake:
 
 ```sh
 NIX_CONFIG="experimental-features = nix-command flakes" 
-sudo nixos-rebuild switch --flake .#hostname
+sudo nixos-rebuild switch --flake .#<your-desired-hostname>

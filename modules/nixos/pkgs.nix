@@ -29,6 +29,10 @@
 
   programs = {
     zsh.enable = true;
+    gnupg.agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-gnome3;
+    };
     steam = {
       enable = true;
       remotePlay.openFirewall = true;

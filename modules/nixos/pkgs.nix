@@ -31,7 +31,7 @@
     zsh.enable = true;
     gnupg.agent = {
       enable = true;
-      pinentryPackage = pkgs.pinentry-gnome3;
+      pinentryPackage = pkgs.pinentry-tty;
     };
     steam = {
       enable = true;

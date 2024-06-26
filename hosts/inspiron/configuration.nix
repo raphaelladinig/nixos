@@ -18,7 +18,7 @@ in
     ../../modules/nixos/locales.nix
     ../../modules/nixos/virtualisation.nix
   ];
-  
+
   boot.loader.grub = {
     enable = true;
     device = "nodev";

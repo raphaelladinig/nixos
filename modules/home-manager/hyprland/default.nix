@@ -14,11 +14,13 @@
     waybar
     mako
     hyprlock
+    rofi-wayland
   ];
 
   imports = [
     ../waybar
     ../mako
+    ../rofi
     ../gtk.nix
   ];
 }

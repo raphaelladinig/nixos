@@ -6,5 +6,10 @@ in
     enable = true;
     userName = "${gitUsername}";
     userEmail = "${gitEmail}";
+    extraConfig = {
+      pull = {
+        rebase = false;
+      };
+    };
   };
 }

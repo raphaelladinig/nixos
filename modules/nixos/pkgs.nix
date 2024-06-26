@@ -7,6 +7,7 @@
     lazygit
     zoxide
     tokei
+    killall
     neovim
     kitty
     nnn

@@ -1,0 +1,13 @@
+default-timeout=5000
+layer=overlay
+anchor=top-right
+actions=0
+icons=0
+
+font=CaskaydiaCove Nerd Font 15
+background-color=#161616
+text-color=#ffffff
+border-radius=5
+border-color=#ffffff
+outer-margin=5
+margin=1, 1, 5, 0

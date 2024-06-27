@@ -11,5 +11,6 @@
     ./nvim-autopairs
     ./nvim-lspconfig
     ./nvim-treesitter
+    ./indent-blankline
   ];
 }

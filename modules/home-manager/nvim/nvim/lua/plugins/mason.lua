@@ -35,7 +35,6 @@ return {
         "jdtls",
         "java-debug-adapter",
         "java-test",
-        "dart-debug-adapter",
         "marksman",
         "vale",
         "texlab",

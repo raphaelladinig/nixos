@@ -50,7 +50,7 @@ return {
 
     dap.adapters.bashdb = {
       type = "executable",
-      command = "bashdb",
+      command = mason_dir .. "/bash-debug-adapter/bash-debug-adapter",
       name = "bashdb",
     }
     dap.configurations.sh = {
@@ -66,7 +66,7 @@ return {
         program = "${file}",
         cwd = "${workspaceFolder}",
         pathCat = "cat",
-        pathBash = "/bin/bash",
+        pathBash = "bash",
         pathMkfifo = "mkfifo",
         pathPkill = "pkill",
         args = {},

@@ -10,8 +10,6 @@
     neovim
     kitty
     nnn
-    gnumake
-    python3
     neofetch
     git
     htop
@@ -19,12 +17,6 @@
     bluetuith
     mpv
     pass
-    gcc
-    tree-sitter
-    fzf
-    nodejs
-    unzip
-    cargo
   ];
 
   programs = {

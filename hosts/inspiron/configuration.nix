@@ -17,6 +17,7 @@ in
     ../../modules/nixos/pkgs.nix
     ../../modules/nixos/locales.nix
     ../../modules/nixos/virtualisation.nix
+    ../../modules/nixos/opengl.nix
   ];
 
   boot.loader.grub = {

@@ -7,8 +7,6 @@
   "modules-center": [],
   "modules-right": [
     "network",
-    "cpu",
-    "memory",
     "wireplumber",
     "battery",
     "clock",
@@ -20,14 +18,6 @@
     "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ",
     "format-disconnected": "",
     "max-length": 50,
-    "tooltip": false,
-  },
-  "cpu": {
-    "format": "{usage}%  ",
-    "tooltip": false,
-  },
-  "memory": {
-    "format": "{}%  ",
     "tooltip": false,
   },
   "wireplumber": {

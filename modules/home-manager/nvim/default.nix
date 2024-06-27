@@ -1,10 +1,12 @@
 { pkgs, lib, ... }:
 
 {
-  imports = with ./modules; [
-    catppuccin
-    telescope
-    oil
+  imports = [
+    ./modules/catppuccin
+    ./modules/oil
+    ./modules/telescope
+    ./modules/nvim-lspconfig
+    ./modules/nvim-cmp
   ];
 
   programs.neovim = 

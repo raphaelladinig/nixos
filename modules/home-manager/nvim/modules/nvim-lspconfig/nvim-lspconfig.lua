@@ -1,11 +1,3 @@
-return {
-  "neovim/nvim-lspconfig",
-  dependencies = {
-    "nvim-telescope/telescope.nvim",
-    "hrsh7th/cmp-nvim-lsp",
-    "folke/neodev.nvim",
-  },
-  config = function()
     local lspconfig = require("lspconfig")
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -75,5 +67,3 @@ return {
     lspconfig.nil_ls.setup({
       capabilities = capabilities,
     })
-  end,
-}

@@ -2,16 +2,7 @@
 
 {
   imports = [
-    ./modules/catppuccin
-    ./modules/oil
-    ./modules/telescope
-    ./modules/nvim-lspconfig
-    ./modules/nvim-cmp
-    ./modules/conform
-    ./modules/todo-comments
-    ./modules/nvim-autopairs
-    ./modules/nvim-treesitter
-    ./modules/lualine
+    ./modules
   ];
 
   programs.neovim = 

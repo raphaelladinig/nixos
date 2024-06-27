@@ -1,8 +1,3 @@
-return {
-  "catppuccin/nvim",
-  name = "catppuccin",
-  priority = 1000,
-  config = function()
     vim.cmd.colorscheme("catppuccin-mocha");
 
     if vim.env.TERM == "xterm-kitty" then
@@ -22,6 +17,3 @@ return {
           end
         end,
       })
-    end
-  end,
-}

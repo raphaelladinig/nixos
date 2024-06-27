@@ -1,6 +1,12 @@
 { pkgs, lib, ... }:
 
 {
+  imports = with ./modules; [
+    catppuccin
+    telescope
+    oil
+  ];
+
   programs.neovim = 
   {
     enable = true;
@@ -14,25 +20,6 @@
       ${builtins.readFile ./keymaps.lua}
       ${builtins.readFile ./misc.lua}
     '';
-
-    plugins = with pkgs.vimPlugins; [
-      nvim-web-devicons
-      {
-        plugin = telescope-nvim;
-        type = "lua";
-        config = ''${builtins.readFile ./plugins/telescope.lua}'';
-      }
-      {
-        plugin = catppuccin-nvim;
-        type = "lua";
-        config = lib.fileContents ./plugins/catppuccin.lua;
-      }
-      {
-        plugin = oil-nvim;
-        type = "lua";
-        config = ''${builtins.readFile ./plugins/oil.lua}'';
-      }
-    ];
 
     extraPackages = with pkgs; [
       vim-language-server

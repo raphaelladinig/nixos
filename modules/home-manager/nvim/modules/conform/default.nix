@@ -2,10 +2,10 @@
 
 {
   programs.neovim.plugins = with pkgs.vimPlugins; [
-      {
-        plugin = conform-nvim;
-        type = "lua";
-        config = builtins.readFile ./conform.lua;
-      }
-    ];
+    {
+      plugin = conform-nvim;
+      type = "lua";
+      config = builtins.readFile ./conform.lua;
+    }
+  ];
 }

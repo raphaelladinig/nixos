@@ -1,28 +1,4 @@
 require("nvim-treesitter.configs").setup({
-  ensure_installed = {
-    "lua",
-    "vimdoc",
-    "markdown",
-    "markdown_inline",
-    "cpp",
-    "css",
-    "html",
-    "javascript",
-    "typescript",
-    "tsx",
-    "json",
-    "gdscript",
-    "python",
-    "dart",
-    "java",
-    "latex",
-    "bash",
-    "json",
-    "diff",
-    "xml",
-    "java",
-    "nix",
-  },
   auto_install = false,
   sync_install = true,
   highlight = {
@@ -54,7 +30,9 @@ require("nvim-treesitter.configs").setup({
     },
   },
 })
+
 require("nvim-ts-autotag").setup()
+
 require("treesitter-context").setup({
   max_lines = 3,
 })

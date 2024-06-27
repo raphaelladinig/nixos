@@ -8,7 +8,7 @@
       config = builtins.readFile ./nvim-treesitter.lua;
     }
     nvim-treesitter-textobjects
-    nvim-ts-autotags
+    nvim-ts-autotag
     nvim-treesitter-context
   ];
 }

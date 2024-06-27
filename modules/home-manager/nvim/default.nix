@@ -10,6 +10,8 @@
     ./modules/conform
     ./modules/todo-comments
     ./modules/nvim-autopairs
+    ./modules/nvim-treesitter
+    ./modules/lualine
   ];
 
   programs.neovim = 

@@ -40,6 +40,5 @@ eval "$(zoxide init zsh)"
 
 # aliases
 alias v="nvim"
-alias t="tmux"
 alias g="lazygit"
 alias ls="ls --color"

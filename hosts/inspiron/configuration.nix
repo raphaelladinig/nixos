@@ -14,7 +14,6 @@ in
     ../../modules/nixos/nix-settings.nix
     ../../modules/nixos/bluetooth.nix
     ../../modules/nixos/power-management.nix
-    ../../modules/nixos/pkgs.nix
     ../../modules/nixos/locales.nix
     ../../modules/nixos/virtualisation.nix
     ../../modules/nixos/opengl.nix
@@ -49,6 +48,38 @@ in
     useUserPackages = true;
     users.${username} = import ./home.nix;
   };
+
+  environment.systemPackages = with pkgs; [
+    nh
+    firefox
+    lazygit
+    tokei
+    neovim
+    kitty
+    nnn
+    neofetch
+    git
+    htop
+    bluetuith
+    mpv
+    pass
+    nodejs
+  ];
+
+  programs = {
+    zsh.enable = true;
+    gnupg.agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-tty;
+    };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+    };
+  };
+
+  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) ];
 
   system.stateVersion = "24.05";
 }

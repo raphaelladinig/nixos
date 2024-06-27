@@ -13,6 +13,7 @@
     cliphist
     waybar
     mako
+    libnotify
     hyprlock
     rofi-wayland
   ];

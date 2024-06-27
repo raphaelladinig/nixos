@@ -20,17 +20,18 @@
     '';
 
     plugins = with pkgs.vimPlugins; [
+      nvim-web-devicons
       {
         plugin = telescope-nvim;
-        config = toLuaFile ./plugin/nvim-telescope.lua;
+        config = toLuaFile ./plugins/nvim-telescope.lua;
       }
       {
         plugin = catppuccin-nvim;
-        config = toLuaFile ./plugin/catppuccin.lua;
+        config = toLuaFile ./plugins/catppuccin.lua;
       }
       {
         plugin = oil-nvim;
-        config = toLuaFile ./plugin/oil.lua;
+        config = toLuaFile ./plugins/oil.lua;
       }
     ];
 

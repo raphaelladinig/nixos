@@ -1,6 +1,22 @@
 { pkgs, ... }:
 
 {
+  home.file = {
+    ".config/nvim".source = ./nvim;
+  };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+    plugins = with pkgs.vimPlugins; [
+      telescope-nvim
+      vimPlugins.telescope-fzf-native-nvim
+    ];
+  };
+
   home.packages = with pkgs; [
     vim-language-server
     lua-language-server
@@ -29,7 +45,5 @@
     jdt-language-server
     vscode-extensions.vscjava.vscode-java-test
     vscode-extensions.vscjava.vscode-java-debug
-    vimPlugins.telescope-fzf-native-nvim
-    vimPlugins.telescope-nvim
   ];
 }

@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  # home.file = {
-  #   ".config/nvim".source = ./nvim;
-  # };
-
   programs.neovim = {
     enable = true;
 
@@ -19,7 +15,10 @@
     '';
 
     plugins = with pkgs.vimPlugins; [
-      telescope-nvim
+      {
+        plugin = telescope-nvim;
+        config = toLuaFile ./plugin/telescope.lua;
+      }
     ];
   };
 

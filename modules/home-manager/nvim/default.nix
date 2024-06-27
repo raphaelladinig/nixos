@@ -32,5 +32,6 @@
     vscode-extensions.vscjava.vscode-java-test
     vscode-extensions.vscjava.vscode-java-debug
     vimPlugins.telescope-fzf-native-nvim
+    vimPlugins.telescope-nvim
   ];
 }

@@ -55,7 +55,6 @@ in
     firefox
     lazygit
     tokei
-    neovim
     kitty
     nnn
     neofetch

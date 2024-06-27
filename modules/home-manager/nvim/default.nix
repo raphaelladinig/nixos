@@ -1,8 +1,20 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
-{ 
-  home.file = {
-    ".config/nvim".source = ./nvim;
+{
+  programs.neovim = {
+    enable = true;
+
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+
+    extraLuaConfig = ''
+      ${builtins.readFile ./nvim/init.lua}
+    '';
+
+    plugins = with pkgs.vimPlugins; [
+      telescope-nvim
+    ];
   };
 
   home.packages = with pkgs; [
@@ -33,5 +45,7 @@
     jdt-language-server
     vscode-extensions.vscjava.vscode-java-test
     vscode-extensions.vscjava.vscode-java-debug
+    gnumake
+    cmake
   ];
 }

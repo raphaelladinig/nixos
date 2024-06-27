@@ -1,26 +1,30 @@
 { pkgs, ... }:
 
-{
-  programs.neovim = {
-    enable = true;
-
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-
-    extraLuaConfig = ''
-      ${builtins.readFile ./options.lua}
-      ${builtins.readFile ./misc.lua}
-      ${builtins.readFile ./keymaps.lua}
-    '';
-
-    plugins = with pkgs.vimPlugins; [
-      {
-        plugin = telescope-nvim;
-        config = toLuaFile ./plugin/telescope.lua;
-      }
-    ];
+{ 
+  home.file = {
+    ".config/nvim".source = ./nvim;
   };
+  # programs.neovim = {
+  #   enable = true;
+  #
+  #   viAlias = true;
+  #   vimAlias = true;
+  #   vimdiffAlias = true;
+  #
+  #   extraLuaConfig = ''
+  #     ${builtins.readFile ./options.lua}
+  #     ${builtins.readFile ./misc.lua}
+  #     ${builtins.readFile ./keymaps.lua}
+  #   '';
+  #
+  #   plugins = with pkgs.vimPlugins; [
+  #     {
+  #       plugin = telescope-nvim;
+  #       type = "lua";
+  #       config = builtins.readFile(./plugin/telescope.lua);
+  #     }
+  #   ];
+  # };
 
   home.packages = with pkgs; [
     vim-language-server

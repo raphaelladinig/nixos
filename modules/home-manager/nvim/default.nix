@@ -28,10 +28,13 @@
         plugin = catppuccin-nvim;
         config = toLuaFile ./plugin/catppuccin.lua;
       }
+      {
+        plugin = oil-nvim;
+        config = toLuaFile ./plugin/oil.lua;
+      }
     ];
-  };
 
-  home.packages = with pkgs; [
+    extraPackages = with pkgs; [
     vim-language-server
     lua-language-server
     stylua
@@ -59,7 +62,7 @@
     jdt-language-server
     vscode-extensions.vscjava.vscode-java-test
     vscode-extensions.vscjava.vscode-java-debug
-    gnumake
-    cmake
-  ];
+    
+    ];
+  };
 }

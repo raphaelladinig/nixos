@@ -16,6 +16,7 @@
     libnotify
     hyprlock
     rofi-wayland
+    wl-clipboard
   ];
 
   imports = [

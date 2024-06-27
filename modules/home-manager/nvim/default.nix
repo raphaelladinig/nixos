@@ -8,6 +8,7 @@
     ./modules/nvim-lspconfig
     ./modules/nvim-cmp
     ./modules/conform
+    ./modules/todo-comments
   ];
 
   programs.neovim = 

@@ -1,19 +1,23 @@
 { pkgs, ... }:
 
 {
-  home.file = {
-    ".config/nvim".source = ./nvim;
-  };
+  # home.file = {
+  #   ".config/nvim".source = ./nvim;
+  # };
 
   programs.neovim = {
     enable = true;
-    defaultEditor = true;
+
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
+
+    extraLuaConfig = ''
+      ${builtins.readFile ./keymaps.lua}
+    '';
+
     plugins = with pkgs.vimPlugins; [
       telescope-nvim
-      vimPlugins.telescope-fzf-native-nvim
     ];
   };
 

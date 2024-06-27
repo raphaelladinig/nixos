@@ -9,6 +9,7 @@
     ./modules/nvim-cmp
     ./modules/conform
     ./modules/todo-comments
+    ./modules/nvim-autopairs
   ];
 
   programs.neovim = 

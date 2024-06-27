@@ -1,6 +1,3 @@
-return {
-  "stevearc/conform.nvim",
-  config = function()
     local conform = require("conform")
 
     conform.setup({
@@ -25,5 +22,3 @@ return {
     vim.keymap.set({ "n", "v" }, "<leader>mp", function()
       conform.format()
     end)
-  end,
-}

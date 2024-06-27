@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -7,6 +7,7 @@
     ./modules/telescope
     ./modules/nvim-lspconfig
     ./modules/nvim-cmp
+    ./modules/conform
   ];
 
   programs.neovim = 

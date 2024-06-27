@@ -13,6 +13,8 @@
     vimdiffAlias = true;
 
     extraLuaConfig = ''
+      ${builtins.readFile ./options.lua}
+      ${builtins.readFile ./misc.lua}
       ${builtins.readFile ./keymaps.lua}
     '';
 

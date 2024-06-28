@@ -3,7 +3,7 @@
 {
   programs.neovim.plugins = with pkgs.vimPlugins; [
     {
-      plugin = neogit-nvim; 
+      plugin = neogit; 
       type = "lua";
       config = builtins.readFile ./neogit.lua;
     }

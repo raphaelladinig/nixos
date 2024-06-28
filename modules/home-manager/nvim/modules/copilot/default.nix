@@ -3,7 +3,7 @@
 {
   programs.neovim.plugins = with pkgs.vimPlugins; [
     {
-      plugin = copilot-nvim;
+      plugin = copilot-lua;
       type = "lua";
       config = builtins.readFile ./copilot.lua;
     }

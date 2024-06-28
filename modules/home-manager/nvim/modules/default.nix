@@ -12,5 +12,13 @@
     ./nvim-lspconfig
     ./nvim-treesitter
     ./indent-blankline
+    ./dressing
+    ./toggleterm
+    ./nvim-lint
+    ./gitsigns
+    ./comment
+    ./luasnip
+    ./neogit
+    ./copilot
   ];
 }

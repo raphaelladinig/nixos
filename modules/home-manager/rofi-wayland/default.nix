@@ -5,7 +5,7 @@ let
 in
 {
   home.file = {
-    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/rofi/rofi";
+    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/rofi-wayland/rofi";
   };
 
   home.packages = with pkgs; [

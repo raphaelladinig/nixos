@@ -30,9 +30,13 @@
   #   nixfmt-rfc-style
   # ];
 
-  xdg.configFile = {
-    nvim = {
-      source = config.lib.file.mkOutOfStoreSymlink "./nvim";
-    };
+  # xdg.configFile = {
+  #   nvim = {
+  #     source = config.lib.file.mkOutOfStoreSymlink "/home/raphael/nixos/modules/home-manager/nvim/nvim";
+  #     recursive = true;
+  #   };
+  # };
+  home.file = {
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/raphael/nixos/modules/home-manager/nvim/nvim";
   };
 }

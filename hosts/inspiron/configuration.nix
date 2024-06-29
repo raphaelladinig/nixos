@@ -55,8 +55,10 @@ in
     firefox
     lazygit
     tokei
+    gnumake
     kitty
     nnn
+    neovim
     neofetch
     git
     htop

@@ -17,6 +17,11 @@ in
     stylua
     nil
     nixfmt-rfc-style
+    pyright
+    black
+    debugpy
+    bash-language-server
+    bashdb
     nodejs
     tree-sitter
     gnumake

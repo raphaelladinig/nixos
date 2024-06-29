@@ -15,7 +15,6 @@ return {
   config = function()
     local dap = require("dap")
     local dapui = require("dapui")
-    local mason_dir = vim.fn.stdpath("data") .. "/mason/packages"
 
     require("nvim-dap-virtual-text").setup({})
     require("neodev").setup({
@@ -23,27 +22,24 @@ return {
     })
     dapui.setup()
 
-    require("dap-python").setup(mason_dir .. "/debugpy/venv/bin/python")
+    require("dap-python").setup("python")
 
-    dap.adapters.codelldb = {
-      type = "server",
-      port = "13000",
-      host = "127.0.0.1",
-      executable = {
-        command = mason_dir .. "/codelldb/codelldb",
-        args = { "--port", "13000" },
-      },
+    dap.adapters.gdb = {
+      type = "executable",
+      command = "gdb",
+      args = { "-i", "dap" },
     }
     dap.configurations.cpp = {
       {
-        type = "codelldb",
+        stopOnEntry = false,
+        name = "Launch",
+        type = "gdb",
         request = "launch",
-        name = "default",
         program = function()
           return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
         end,
         cwd = "${workspaceFolder}",
-        stopOnEntry = false,
+        stopAtBeginningOfMainSubprogram = false,
       },
     }
 
@@ -86,7 +82,7 @@ return {
     end
 
     local filetypes = {
-      codelldb = { "cpp" },
+      gdb = { "cpp" },
     }
     require("dap.ext.vscode").load_launchjs("./launch.json", filetypes)
 

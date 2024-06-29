@@ -20,5 +20,6 @@
     ./luasnip
     ./neogit
     ./copilot
+    ./nvim-dap
   ];
 }

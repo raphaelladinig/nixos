@@ -22,6 +22,8 @@
     extraPackages = with pkgs; [
       vim-language-server
       lua-language-server
+      clang-tools
+      gdb
       stylua
       nil
       nixfmt-rfc-style

@@ -72,11 +72,6 @@ in
       enable = true;
       pinentryPackage = pkgs.pinentry-tty;
     };
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-    };
   };
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) ];

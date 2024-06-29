@@ -16,7 +16,6 @@ return {
         jsonc = { "prettier" },
         markdown = { "prettier" },
         python = { "black" },
-        java = { "clang-format" },
         sh = { "beautysh" },
         nix = { "nixfmt" },
       },

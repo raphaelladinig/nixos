@@ -56,6 +56,7 @@ in
     lazygit
     tokei
     gnumake
+    cmake
     kitty
     nnn
     neovim

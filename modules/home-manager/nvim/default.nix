@@ -1,8 +1,11 @@
 { pkgs, config, ... }:
 
+let
+  inherit (import ../../../variables.nix) flake;
+in
 {
   home.file = {
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ./nvim;
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/nvim/nvim";
   };
 
   home.packages = with pkgs; [
@@ -14,5 +17,9 @@
     stylua
     nil
     nixfmt-rfc-style
+    nodejs
+    tree-sitter
+    gnumake
+    cmake
   ];
 }

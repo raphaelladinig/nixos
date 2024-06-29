@@ -10,7 +10,6 @@
     nvim-dap-virtual-text
     nvim-dap-ui
     neodev-nvim
-    nvim-neotest
-    one-small-step-for-vimkind
+    neotest
   ];
 }

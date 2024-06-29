@@ -43,33 +43,6 @@ return {
       },
     }
 
-    dap.adapters.bashdb = {
-      type = "executable",
-      command = mason_dir .. "/bash-debug-adapter/bash-debug-adapter",
-      name = "bashdb",
-    }
-    dap.configurations.sh = {
-      {
-        type = "bashdb",
-        request = "launch",
-        name = "Launch file",
-        showDebugOutput = true,
-        pathBashdb = mason_dir .. "/bash-debug-adapter/extension/bashdb_dir/bashdb",
-        pathBashdbLib = mason_dir .. "/bash-debug-adapter/extension/bashdb_dir",
-        trace = true,
-        file = "${file}",
-        program = "${file}",
-        cwd = "${workspaceFolder}",
-        pathCat = "cat",
-        pathBash = "bash",
-        pathMkfifo = "mkfifo",
-        pathPkill = "pkill",
-        args = {},
-        env = {},
-        terminalKind = "integrated",
-      },
-    }
-
     dap.configurations.lua = {
       {
         type = "nlua",

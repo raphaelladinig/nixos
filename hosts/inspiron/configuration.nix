@@ -57,6 +57,8 @@ in
     tokei
     gnumake
     cmake
+    python3
+    rustc
     kitty
     nnn
     neovim

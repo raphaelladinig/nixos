@@ -18,12 +18,24 @@ in
     nil
     nixfmt-rfc-style
     pyright
+    (python3.withPackages (python-pkgs: with python-pkgs; [ debugpy ]))
     black
-    debugpy
+    python311Packages.debugpy
+    vale
+    marksman
+    lemminx
+    texlab
+    beautysh
+    prettierd
+    nodePackages.vscode-html-languageserver-bin
+    emmet-language-server
+    nodePackages.vscode-css-languageserver-bin
+    tailwindcss-language-server
+    nodePackages.typescript-language-server
     bash-language-server
-    bashdb
     nodejs
     tree-sitter
+    ripgrep
     gnumake
     cmake
   ];

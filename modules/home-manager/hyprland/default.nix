@@ -1,28 +1,28 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
+let
+  inherit (import ../../../variables.nix) flake;
+in
 {
   home.file = {
-    ".config/hypr".source = ./hypr;
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/hypr/hypr";
   };
 
   home.packages = with pkgs; [
     bibata-cursors
+    (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
     slurp
     grim
     brightnessctl
     cliphist
-    waybar
-    mako
-    libnotify
     hyprlock
-    rofi-wayland
     wl-clipboard
   ];
 
   imports = [
     ../waybar
     ../mako
-    ../rofi
+    ../rofi-wayland
     ../gtk.nix
   ];
 }

@@ -79,7 +79,7 @@ in
     };
   };
 
-  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "CascadiaCode" ]; }) ];
+  # fonts.packages = with pkgs; [  ];
 
   system.stateVersion = "24.05";
 }

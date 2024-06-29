@@ -5,11 +5,11 @@ let
 in
 {
   home.file = {
-    ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/waybar/waybar";
+    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/rofi/rofi";
   };
 
   home.packages = with pkgs; [
+    rofi-wayland
     (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
-    waybar
   ];
 }

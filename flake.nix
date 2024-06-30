@@ -20,7 +20,9 @@
           specialArgs = {
             inherit inputs;
           };
-          modules = [ ./hosts/inspiron/configuration.nix ];
+          modules = [
+            ./hosts/inspiron/configuration.nix
+          ];
         };
       };
     };

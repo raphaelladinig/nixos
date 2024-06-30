@@ -19,6 +19,6 @@ in
     ../../modules/home-manager/nvim
     ../../modules/home-manager/git.nix
   ];
-  
+
   programs.home-manager.enable = true;
 }

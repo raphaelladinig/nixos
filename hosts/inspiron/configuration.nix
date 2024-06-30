@@ -1,5 +1,7 @@
 { inputs, pkgs, ... }:
-let inherit (import ../../variables.nix) username; in
+let
+  inherit (import ../../variables.nix) username;
+in
 {
   imports = [
     ./hardware-configuration.nix

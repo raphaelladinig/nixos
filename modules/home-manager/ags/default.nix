@@ -8,5 +8,8 @@ in
     ".config/ags".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/ags/ags";
   };
 
-  home.packages = with pkgs; [ ags ];
+  home.packages = with pkgs; [
+    ags
+    bun
+  ];
 }

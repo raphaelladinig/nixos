@@ -10,7 +10,7 @@ in
     inputs.nixos-hardware.nixosModules.dell-inspiron-5515
     ../../modules/nixos/audio.nix
     ../../modules/nixos/network.nix
-    ../../modules/nixos/hyprland.nix
+    ../../modules/nixos/hyprland
     ../../modules/nixos/system.nix
     ../../modules/nixos/bluetooth.nix
     ../../modules/nixos/locales.nix

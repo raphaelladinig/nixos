@@ -48,21 +48,13 @@ in
   environment.systemPackages = with pkgs; [
     nh
     firefox
-    lazygit
     tokei
     gnumake
     cmake
     python3
     rustc
-    ags
-    kitty
-    neovim
-    yazi
     neofetch
-    git
     htop
-    bluetuith
-    mpv
     pass
     nodejs
   ];

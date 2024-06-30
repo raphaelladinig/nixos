@@ -12,4 +12,8 @@ in
     fzf
     zoxide
   ];
+
+  imports = [
+    ../yazi
+  ];
 }

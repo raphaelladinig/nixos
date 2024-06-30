@@ -14,6 +14,8 @@ in
   
   home.packages = with pkgs; [
     ags
+    upower
     bun
+    sassc
   ];
 }

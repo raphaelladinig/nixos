@@ -1,8 +1,8 @@
-import { Bar } from "./widget/bar/bar";
+import { forMonitors } from "./lib/utils";
+import "styles/style";
+import Bar from "./widgets/Bar/Bar";
 
 App.config({
-    style: "./style/bar.scss",
-    windows: [
-      Bar()
-    ],
+  style: css,
+  windows: [...forMonitors(Bar)],
 });

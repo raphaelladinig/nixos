@@ -38,7 +38,7 @@ in
     nodePackages.vscode-css-languageserver-bin
     tailwindcss-language-server
     nodePackages.typescript-language-server
-    nodePackages_latest.vscode-json-languageserver-bin
+    nodePackages.vscode-json-languageserver
     bash-language-server
   ];
 }

@@ -13,6 +13,7 @@ in
     (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
     slurp
     grim
+    swappy
     brightnessctl
     cliphist
     hyprlock

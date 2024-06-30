@@ -56,8 +56,8 @@ in
     rustc
     ags
     kitty
-    nnn
     neovim
+    yazi
     neofetch
     git
     htop

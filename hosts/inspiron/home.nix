@@ -15,6 +15,7 @@ in
     ../../modules/home-manager/zsh
     ../../modules/home-manager/bluetuith
     ../../modules/home-manager/kitty
+    ../../modules/home-manager/lazygit
     ../../modules/home-manager/nvim
     ../../modules/home-manager/git.nix
   ];

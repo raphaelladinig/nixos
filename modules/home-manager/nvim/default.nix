@@ -9,6 +9,12 @@ in
   };
 
   home.packages = with pkgs; [
+    neovim
+    nodejs
+    tree-sitter
+    ripgrep
+    gnumake
+    cmake
     vim-language-server
     lua-language-server
     clang-tools
@@ -34,10 +40,5 @@ in
     nodePackages.typescript-language-server
     nodePackages_latest.vscode-json-languageserver-bin
     bash-language-server
-    nodejs
-    tree-sitter
-    ripgrep
-    gnumake
-    cmake
   ];
 }

@@ -1,8 +1,5 @@
 { inputs, pkgs, ... }:
-
-let
-  inherit (import ../../variables.nix) username;
-in
+let inherit (import ../../variables.nix) username; in
 {
   imports = [
     ./hardware-configuration.nix
@@ -53,10 +50,10 @@ in
     cmake
     python3
     rustc
+    nodejs
     neofetch
     htop
     pass
-    nodejs
   ];
 
   programs = {

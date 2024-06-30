@@ -32,6 +32,7 @@ in
     nodePackages.vscode-css-languageserver-bin
     tailwindcss-language-server
     nodePackages.typescript-language-server
+    nodePackages_latest.vscode-json-languageserver-bin
     bash-language-server
     nodejs
     tree-sitter

@@ -1,10 +1,5 @@
 { pkgs, ... }:
 
-let
-  config = pkgs.writeText "greetd-config" ''
-    exec-once = ags --config /etc/greetd/greeter.js; hyprctl dispatch exit
-  '';
-in
 {
   programs.hyprland.enable = true;
 
@@ -24,7 +19,7 @@ in
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.hyprland}/bin/Hyprland --config ${config}";
+        command = "${pkgs.hyprland}/bin/Hyprland --config /etc/greetd/hyprland.conf";
       };
     };
   };

@@ -11,7 +11,7 @@ in
     ../../modules/nixos/audio.nix
     ../../modules/nixos/network.nix
     ../../modules/nixos/hyprland.nix
-    ../../modules/nixos/nix-settings.nix
+    ../../modules/nixos/system.nix
     ../../modules/nixos/bluetooth.nix
     ../../modules/nixos/locales.nix
     ../../modules/nixos/virtualisation.nix

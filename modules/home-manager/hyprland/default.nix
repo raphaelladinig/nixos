@@ -6,6 +6,7 @@ in
 {
   home.file = {
     ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/hyprland/hypr";
+    "/etc/greetd/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/hyprland/greetd.conf";
   };
 
   home.packages = with pkgs; [

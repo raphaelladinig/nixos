@@ -13,7 +13,6 @@ in
     ../../modules/nixos/system.nix
     ../../modules/nixos/bluetooth.nix
     ../../modules/nixos/virtualisation.nix
-    ../../modules/nixos/opengl.nix
     ../../modules/nixos/power-management.nix
   ];
 

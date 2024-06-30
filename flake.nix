@@ -10,8 +10,6 @@
     };
 
     nur.url = "github:nix-community/NUR";
-
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =

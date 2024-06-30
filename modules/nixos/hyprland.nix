@@ -10,21 +10,19 @@
 
   environment.systemPackages = with pkgs; [
     polkit_gnome
-    ags
+    greetd.greetd
   ];
 
   services.libinput.enable = true;
 
-  environment.etc."greetd/greeter.js".source = ./greeter.js;
-  environment.etc."greetd/greeter.conf".source = ./greeter.conf;
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.hyprland}/bin/Hyprland --config /etc/greetd/greeter.conf";
-      };
-    };
-  };
+  # services.greetd = {
+  #   enable = true;
+  #   settings = {
+  #     default_session = {
+  #       command = "agreety --cmd Hyprland";
+  #     };
+  #   };
+  # };
 
   security.polkit.enable = true;
 

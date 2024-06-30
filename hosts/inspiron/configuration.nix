@@ -59,6 +59,7 @@ in
     cmake
     python3
     rustc
+    powertop
     kitty
     nnn
     neovim

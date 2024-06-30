@@ -28,5 +28,8 @@
     };
   };
 
-  imports = [ ./polkit.nix ];
+  imports = [
+    ./polkit.nix
+    ./greetd.nix
+  ];
 }

@@ -12,7 +12,6 @@ in
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/system.nix
     ../../modules/nixos/bluetooth.nix
-    ../../modules/nixos/locales.nix
     ../../modules/nixos/virtualisation.nix
     ../../modules/nixos/opengl.nix
     ../../modules/nixos/power-management.nix
@@ -26,8 +25,6 @@ in
   };
 
   networking.hostName = "inspiron";
-
-  time.timeZone = "Europe/Vienna";
 
   users.users.${username} = {
     isNormalUser = true;
@@ -90,6 +87,8 @@ in
     ];
     after = [ "post-resume.target" ];
   };
+
+  hardware.opengl.enable = true;
 
   boot.initrd.kernelModules = [ "amdgpu" ];
 

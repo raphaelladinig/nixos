@@ -7,7 +7,6 @@ in
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
-    inputs.nixos-hardware.nixosModules.dell-inspiron-5515
     ../../modules/nixos/audio.nix
     ../../modules/nixos/network.nix
     ../../modules/nixos/hyprland
@@ -16,6 +15,7 @@ in
     ../../modules/nixos/locales.nix
     ../../modules/nixos/virtualisation.nix
     ../../modules/nixos/opengl.nix
+    ../../modules/nixos/power-management.nix
   ];
 
   boot.loader.grub = {
@@ -78,6 +78,20 @@ in
       pinentryPackage = pkgs.pinentry-tty;
     };
   };
+
+  systemd.services.fix-touchpad = {
+    path = [ pkgs.kmod ];
+    serviceConfig.ExecStart = ''${pkgs.systemd}/bin/systemd-inhibit --what=sleep --why="fixing touchpad must finish before sleep" --mode=delay  ${./fix_touchpad.sh}'';
+    serviceConfig.Type = "oneshot";
+    description = "reload touchpad driver";
+    wantedBy = [
+      "display-manager.service"
+      "post-resume.target"
+    ];
+    after = [ "post-resume.target" ];
+  };
+
+  boot.initrd.kernelModules = [ "amdgpu" ];
 
   system.stateVersion = "24.05";
 }

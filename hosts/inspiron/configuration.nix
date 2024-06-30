@@ -13,7 +13,6 @@ in
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/nix-settings.nix
     ../../modules/nixos/bluetooth.nix
-    ../../modules/nixos/power-management.nix
     ../../modules/nixos/locales.nix
     ../../modules/nixos/virtualisation.nix
     ../../modules/nixos/opengl.nix
@@ -59,7 +58,7 @@ in
     cmake
     python3
     rustc
-    powertop
+    ags
     kitty
     nnn
     neovim
@@ -79,8 +78,6 @@ in
       pinentryPackage = pkgs.pinentry-tty;
     };
   };
-
-  # fonts.packages = with pkgs; [  ];
 
   system.stateVersion = "24.05";
 }

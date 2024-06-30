@@ -1,5 +1,10 @@
 { pkgs, ... }:
 
+let
+  config = pkgs.writeText "greetd-config" ''
+    exec-once = ags --config /etc/greetd/greeter.js; hyprctl dispatch exit
+  '';
+in
 {
   programs.hyprland.enable = true;
 
@@ -7,11 +12,25 @@
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
+  
+  environment.systemPackages = with pkgs; [
+    polkit_gnome
+    ags
+  ];
 
   services.libinput.enable = true;
 
-  environment.systemPackages = with pkgs; [ polkit_gnome ];
-
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.hyprland}/bin/Hyprland --config ${config}";
+      };
+    };
+  };
+  
+  security.polkit.enable = true;
+  
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
@@ -27,9 +46,4 @@
       };
     };
   };
-
-  imports = [
-    ./polkit.nix
-    ./greetd.nix
-  ];
 }

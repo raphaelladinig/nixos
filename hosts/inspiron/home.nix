@@ -17,6 +17,7 @@ in
     ../../modules/home-manager/kitty
     ../../modules/home-manager/nvim
     ../../modules/home-manager/git.nix
+    ../../modules/home-manager/ags
   ];
   
   programs.home-manager.enable = true;

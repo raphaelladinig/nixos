@@ -38,6 +38,10 @@ return {
 
     lspconfig.cssls.setup({
       capabilities = capabilities,
+      cmd = {
+        "css-languageserver",
+        "--stdio",
+      },
     })
 
     lspconfig.tailwindcss.setup({
@@ -66,6 +70,10 @@ return {
 
     lspconfig.jsonls.setup({
       capabilities = capabilities,
+      cmd = {
+        "vscode-json-languageserver",
+        "--stdio",
+      },
     })
 
     lspconfig.lemminx.setup({

@@ -1,3 +1,4 @@
-- [ ] fix nvim lsp (css, html, json)
+- [x] fix nvim lsp (css, html, json)
 - [ ] configure ags and replace waybar, mako, ...
 - [ ] fix flake
+- [ ] disco

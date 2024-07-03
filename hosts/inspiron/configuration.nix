@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  inherit (import ../../variables.nix) username;
+  inherit (import ../../options.nix) username;
 in
 {
   imports = [

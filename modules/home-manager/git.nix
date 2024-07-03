@@ -1,5 +1,5 @@
 let
-  inherit (import ../../variables.nix) gitUsername gitEmail;
+  inherit (import ../../options.nix) gitUsername gitEmail;
 in
 {
   programs.git = {

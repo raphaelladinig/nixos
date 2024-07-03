@@ -5,7 +5,8 @@ export default {
     primary: "#51a4e7",
     margin: "7px",
     radius: "5px",
-    spacing: "10px",
+    spacing: "5px",
+    transition: "100ms",
   },
-  icons: {}
+  icons: {},
 };

@@ -21,9 +21,6 @@ in
   ];
 
   imports = [
-    ../waybar
-    ../mako
-    ../rofi-wayland
     ../ags
     ../gtk.nix
   ];

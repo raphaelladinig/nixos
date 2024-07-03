@@ -1,5 +1,5 @@
 const date = Variable("", {
-  poll: [1000, 'date "+%H:%M - %A %e.%m"'],
+  poll: [1000, 'date "+%H:%M - %A %d.%m"'],
 });
 
 export default () => {

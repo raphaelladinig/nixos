@@ -1,16 +1,28 @@
-const hyprland = await Service.import("hyprland")
+const hyprland = await Service.import("hyprland");
 
 export default () => {
-    const activeId = hyprland.active.workspace.bind("id")
-    const workspaces = hyprland.bind("workspaces")
-        .as(ws => ws.map(({ id }) => Widget.Button({
-            on_clicked: () => hyprland.messageAsync(`dispatch workspace ${id}`),
-            child: Widget.Label(`${id}`),
-            class_name: activeId.as(i => `${i === id ? "focused" : ""}`),
-        })))
+  const workspaces = hyprland.bind("workspaces").as((ws) =>
+    ws.map(({ id }) =>
+      Widget.Label({
+        vpack: "center",
+        label: `${id}`,
+        setup: (self) =>
+          self.hook(hyprland, () => {
+            self.toggleClassName(
+              "active",
+              hyprland.active.workspace.id === id,
+            );
+            self.toggleClassName(
+              "occupied",
+              (hyprland.getWorkspace(id)?.windows || 0) > 0,
+            );
+          }),
+      }),
+    ),
+  );
 
-    return Widget.Box({
-        class_name: "workspaces",
-        children: workspaces,
-    })
-}
+  return Widget.Box({
+    class_name: "workspaces",
+    children: workspaces,
+  });
+};

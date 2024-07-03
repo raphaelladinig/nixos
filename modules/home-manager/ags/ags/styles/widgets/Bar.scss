@@ -1,3 +1,26 @@
 .bar {
-  background-color: #171717;
+  background-color: $bg;
+
+  .workspaces {
+    label {
+      font-size: 0;
+      min-width: 5pt;
+      min-height: 5pt;
+      border-radius: 5px;
+      margin: 0 5pt;
+      background-color: transparentize(#eeeeee, 0.8);
+
+      &.occupied {
+        background-color: transparentize(#eeeeee, 0.2);
+        min-width: 7pt;
+        min-height: 7pt;
+      }
+
+      &.active {
+        background-color: #51a4e7;
+        min-width: 20pt;
+        min-height: 12pt;
+      }
+    }
+  }
 }

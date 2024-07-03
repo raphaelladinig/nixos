@@ -47,6 +47,7 @@ const microphoneIndicator = () =>
 
 export default () => {
   return Widget.Box({
+    class_name: "system",
     children: [
       bluetoothIndicator(),
       networkIndicator(),

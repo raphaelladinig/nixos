@@ -1,9 +1,10 @@
 .bar {
+  font-size: 14pt;
   background-color: $bg;
   transition: $transition;
 
   > * {
-    margin: $spacing;
+    margin: $spacing $spacing * 2;
   }
 
   .workspaces {
@@ -12,7 +13,7 @@
       min-width: 5pt;
       min-height: 5pt;
       border-radius: $radius;
-      margin: 0 $margin * 0.5;
+      margin: 0 $margin;
       background-color: transparentize($fg, 0.8);
       transition: $transition;
 
@@ -27,6 +28,12 @@
         min-width: 20pt;
         min-height: 12pt;
       }
+    }
+  }
+
+  .system {
+    image {
+      margin: 0 $margin;
     }
   }
 }

@@ -1,15 +1,15 @@
 import options from "options";
 
-const variables = () => [
-  `$bg: ${options.theme.bg}`,
-  `$fg: ${options.theme.fg}`,
-  `$primary: ${options.theme.primary}`,
-];
+const variables = () => {
+  let vars = [];
+  for (let key in options.theme) {
+    vars.push(`$${key}: ${options.theme[key]};`);
+  }
+  return vars;
+};
 
 async function applyScss() {
   try {
-    console.log("Applying SCSS...");
-
     const scss = `/tmp/ags/main.scss`;
     const vars = `/tmp/ags/vars.scss`;
     const css = `/tmp/ags/main.css`;
@@ -23,10 +23,10 @@ async function applyScss() {
 
     App.resetCss();
     App.applyCss(css);
-  } catch (error) {
-    error instanceof Error ? logError(error) : console.error(error);
+  } catch (e) {
+    console.error(e);
   }
 }
 
 Utils.monitorFile(`${App.configDir}/styles`, applyScss);
-applyScss();
+await applyScss();

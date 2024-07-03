@@ -1,6 +1,10 @@
 import options from "options";
 
-const variables = () => [`$bg: ${options.theme.bg}`];
+const variables = () => [
+  `$bg: ${options.theme.bg}`,
+  `$fg: ${options.theme.fg}`,
+  `$primary: ${options.theme.primary}`,
+];
 
 async function applyScss() {
   try {

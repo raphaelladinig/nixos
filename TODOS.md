@@ -2,3 +2,4 @@
 - [ ] configure ags and replace waybar, mako, ...
 - [ ] fix flake
 - [ ] disco
+- [ ] firefox

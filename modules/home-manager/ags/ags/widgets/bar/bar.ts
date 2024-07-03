@@ -1,7 +1,7 @@
-import Workspaces from "./modules/Workspaces";
-import Date from "./modules/Date";
-import System from "./modules/System";
-import Battery from "./modules/Battery";
+import Workspaces from "./modules/workspaces";
+import Date from "./modules/date";
+import System from "./modules/system";
+import Battery from "./modules/battery";
 
 function Left() {
   return Widget.Box({

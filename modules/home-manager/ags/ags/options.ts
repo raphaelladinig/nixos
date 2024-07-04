@@ -7,6 +7,7 @@ export default {
     radius: "5px",
     spacing: "6px",
     transition: "100ms",
+    notificationWidth: "300px",
   },
   bar: {
     workspaces: 10,
@@ -17,7 +18,4 @@ export default {
       frames: 20,
     },
   },
-  notifications: {
-    width: 100,
-  }
 };

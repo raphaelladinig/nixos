@@ -1,5 +1,4 @@
 $icon-size: 68px;
-$notification-width: 350px;
 
 @mixin action-button-margin {
   margin: 0 .4em;
@@ -28,7 +27,7 @@ window.notification-popups box.notifications {
   }
 
   .notification {
-    min-width: $notification-width;
+    min-width: $notificationWidth;
     border-radius: $radius * 2;
     padding: $padding * 2;
     margin: $margin;

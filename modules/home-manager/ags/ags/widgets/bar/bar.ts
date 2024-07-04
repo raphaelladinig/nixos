@@ -6,7 +6,9 @@ import Battery from "./modules/battery";
 function Left() {
   return Widget.Box({
     hpack: "start",
-    children: [Workspaces()],
+    children: [
+      Workspaces(),
+    ],
   });
 }
 

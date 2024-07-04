@@ -94,8 +94,4 @@ export default {
     ram: "drive-harddisk-solidstate-symbolic",
     temp: "temperature-symbolic",
   },
-  color: {
-    dark: "dark-mode-symbolic",
-    light: "light-mode-symbolic",
-  },
 };

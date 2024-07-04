@@ -1,9 +1,5 @@
 $icon-size: 68px;
 $notification-width: 350px;
-$border-radius: 11px;
-$padding: 1em;
-$margin: .5em;
-$border: 1px solid $bg;
 
 @mixin action-button-margin {
   margin: 0 .4em;
@@ -33,10 +29,9 @@ window.notification-popups box.notifications {
 
   .notification {
     min-width: $notification-width;
-    border-radius: $border-radius;
-    padding: $padding;
+    border-radius: $radius * 2;
+    padding: $padding * 2;
     margin: $margin;
-    border: $border;
     background-color: $bg;
 
     &.critical {

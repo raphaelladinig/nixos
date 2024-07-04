@@ -1,6 +1,8 @@
+import { type Notification } from "types/service/notifications";
+
 const notifications = await Service.import("notifications");
 
-function NotificationIcon({ app_entry, app_icon, image }) {
+function notificationIcon({ app_entry, app_icon, image }: Notification) {
   if (image) {
     return Widget.Box({
       css:
@@ -21,11 +23,11 @@ function NotificationIcon({ app_entry, app_icon, image }) {
   });
 }
 
-function Notification(n) {
+function notification(n: Notification) {
   const icon = Widget.Box({
     vpack: "start",
     class_name: "icon",
-    child: NotificationIcon(n),
+    children: [notificationIcon(n)],
   });
 
   const title = Widget.Label({
@@ -81,18 +83,18 @@ function Notification(n) {
   );
 }
 
-export default (monitor = 0) => {
+export default (monitor: number) => {
   const list = Widget.Box({
     vertical: true,
-    children: notifications.popups.map(Notification),
+    children: notifications.popups.map(notification),
   });
 
-  function onNotified(_, id) {
+  function onNotified(_: unknown, id: number) {
     const n = notifications.getNotification(id);
-    if (n) list.children = [Notification(n), ...list.children];
+    if (n) list.children = [notification(n), ...list.children];
   }
 
-  function onDismissed(_, id) {
+  function onDismissed(_: unknown, id: number) {
     list.children.find((n) => n.attribute.id === id)?.destroy();
   }
 
@@ -102,7 +104,7 @@ export default (monitor = 0) => {
 
   return Widget.Window({
     monitor,
-    name: `notifications${monitor}`,
+    name: `notifications-${monitor}`,
     class_name: "notification-popups",
     anchor: ["top", "right"],
     child: Widget.Box({
@@ -112,4 +114,4 @@ export default (monitor = 0) => {
       child: list,
     }),
   });
-}
+};

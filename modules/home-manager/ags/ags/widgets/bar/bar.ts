@@ -37,4 +37,4 @@ export default (monitor: number) => {
       end_widget: Right(),
     }),
   });
-}
+};

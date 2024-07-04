@@ -1,8 +1,9 @@
 const hyprland = await Service.import("hyprland");
 import options from "options";
+import { range } from "lib/utils";
 
 export default () => {
-  const workspaces = Array.from({ length: options.bar.workspaces }, (_, i) => i + 1); 
+  const workspaces = range(options.bar.workspaces);
 
   return Widget.Box({
     class_name: "workspaces",

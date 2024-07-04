@@ -3,6 +3,7 @@ export default {
     bg: "#171717",
     fg: "#eeeeee",
     margin: "4px",
+    padding: "2px",
     radius: "5px",
     spacing: "6px",
     transition: "100ms",
@@ -10,5 +11,10 @@ export default {
   bar: {
     workspaces: 10,
   },
-  icons: {},
+  osi: {
+    delay: 2000,
+    progress: {
+      frames: 20,
+    },
+  },
 };

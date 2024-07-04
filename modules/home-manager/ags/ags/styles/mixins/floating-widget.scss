@@ -1,0 +1,8 @@
+@mixin floating-widget {
+  margin: $margin;
+  background-color: $bg;
+  color: $fg;
+  border-radius: $radius;
+  padding: $padding;
+  border: 1px solid transparentize($bg, 0.8);
+}

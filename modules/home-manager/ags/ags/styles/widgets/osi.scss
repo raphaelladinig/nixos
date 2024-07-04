@@ -1,2 +1,28 @@
 .osi {
+  box {
+    margin: $margin;
+  }
+
+  .progress {
+    @include floating-widget;
+    margin: $margin * 0.5;
+
+    .fill {
+      background-color: $fg;
+      border-radius: $radius;
+
+      image {
+        color: $bg;
+        -gtk-icon-transform: scale(0.7);
+      }
+    }
+  }
+
+  .microphone {
+    @include floating-widget;
+    font-size: 60px;
+    color: $fg;
+    padding: $padding * 4;
+    margin: $margin * 2;
+  }
 }

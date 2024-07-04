@@ -1,3 +1,68 @@
-.notifications {
+$icon-size: 68px;
+$notification-width: 350px;
+$border-radius: 11px;
+$padding: 1em;
+$margin: .5em;
+$border: 1px solid $bg;
 
+@mixin action-button-margin {
+  margin: 0 .4em;
+  margin-top: .8em;
+}
+
+window.notification-popups box.notifications {
+  padding: .5em;
+
+  .icon {
+    min-width: $icon-size;
+    min-height: $icon-size;
+    margin-right: 1em;
+
+    image {
+      font-size: 58px;
+      margin: 5px;
+      color: $fg;
+    }
+
+    box {
+      min-width: $icon-size;
+      min-height: $icon-size;
+      border-radius: 7px;
+    }
+  }
+
+  .notification {
+    min-width: $notification-width;
+    border-radius: $border-radius;
+    padding: $padding;
+    margin: $margin;
+    border: $border;
+    background-color: $bg;
+
+    &.critical {
+      border: 1px solid lightcoral;
+    }
+  }
+
+  .title, .body {
+    color: $fg;
+  }
+
+  .title {
+    font-size: 1.4em;
+  }
+
+  .actions {
+    .action-button {
+      @include action-button-margin;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }

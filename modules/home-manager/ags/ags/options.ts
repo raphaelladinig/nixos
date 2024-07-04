@@ -7,8 +7,8 @@ export default {
     spacing: "6px",
     transition: "100ms",
   },
-  icons: {},
   bar: {
     workspaces: 10,
   },
+  icons: {},
 };

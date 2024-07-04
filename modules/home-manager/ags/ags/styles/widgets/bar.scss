@@ -2,12 +2,10 @@
   font-size: 14pt;
   background-color: $bg;
   transition: $transition;
-
-  > * {
-    margin: $spacing $spacing * 2;
-  }
+  font-weight: bold;
 
   .workspaces {
+    margin: $spacing $spacing;
     label {
       font-size: 0;
       min-width: 5pt;
@@ -24,7 +22,7 @@
       }
 
       &.active {
-        background-color: $primary;
+        background-color: $fg;
         min-width: 20pt;
         min-height: 12pt;
       }
@@ -32,7 +30,15 @@
   }
 
   .system {
+    margin: $spacing $spacing;
     image {
+      margin: 0 $margin;
+    }
+  }
+
+  .battery {
+    margin: $spacing $spacing;
+    label {
       margin: 0 $margin;
     }
   }

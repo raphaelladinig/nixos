@@ -17,4 +17,7 @@ export default {
       frames: 20,
     },
   },
+  notifications: {
+    width: 100,
+  }
 };

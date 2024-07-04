@@ -2,8 +2,8 @@ import { forMonitors } from "./lib/utils";
 import "styles/styles";
 import Bar from "./widgets/bar/bar";
 import Osi from "./widgets/osi/osi";
-import Notifications from "./widgets/notifications/notifications";
+import Notifications from "./widgets/notifications/NotificationPopups";
 
 App.config({
-  windows: [...forMonitors(Bar), ...forMonitors(Osi)],
+  windows: [...forMonitors(Bar), ...forMonitors(Osi), ...forMonitors(Notifications)],
 });

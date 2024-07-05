@@ -1,6 +1,7 @@
 - [x] fix nvim lsp (css, html, json)
 - [ ] configure ags and replace waybar, mako, ...
   - [x] fix notif sizing
+  - [ ] fix notif anim
 - [ ] fix flake
 - [ ] disco
 - [ ] firefox

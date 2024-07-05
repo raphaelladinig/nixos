@@ -39,7 +39,8 @@
   .audio,
   .battery {
     margin: 0 $spacing;
-    label {
+    label,
+    image {
       margin: 0 $margin;
     }
   }

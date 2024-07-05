@@ -5,12 +5,19 @@ export default () => {
     class_name: "network",
     children: [
       Widget.Icon({}).hook(network, (self) => {
-        const icon = network[network.primary || "wifi"]?.icon_name;
+        const icon = network.wired.icon_name;
+        self.icon = icon || "";
+        self.visible = !!icon;
+      }),
+      Widget.Icon({}).hook(network, (self) => {
+        const icon = network.wifi.icon_name;
         self.icon = icon || "";
         self.visible = !!icon;
       }),
       Widget.Label().hook(network, (self) => {
-        self.label = network.wifi.ssid || "";
+        const label = network.wifi.ssid;
+        self.label = label || "";
+        self.visible = !!label;
       }),
     ],
   });

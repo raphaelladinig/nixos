@@ -7,6 +7,9 @@ export default {
     radius: "5px",
     spacing: "6px",
     transition: "100ms",
+    border: "2px solid $fg",
+    font: "CaskaydiaCove NF",
+    "font-size": "14pt",
   },
   bar: {
     workspaces: 10,

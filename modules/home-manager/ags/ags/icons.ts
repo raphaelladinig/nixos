@@ -1,39 +1,10 @@
 export default {
   missing: "image-missing-symbolic",
-  nix: {
-    nix: "nix-snowflake-symbolic",
-  },
-  app: {
-    terminal: "terminal-symbolic",
-  },
   fallback: {
     executable: "application-x-executable",
     notification: "dialog-information-symbolic",
     video: "video-x-generic-symbolic",
     audio: "audio-x-generic-symbolic",
-  },
-  ui: {
-    close: "window-close-symbolic",
-    colorpicker: "color-select-symbolic",
-    info: "info-symbolic",
-    link: "external-link-symbolic",
-    lock: "system-lock-screen-symbolic",
-    menu: "open-menu-symbolic",
-    refresh: "view-refresh-symbolic",
-    search: "system-search-symbolic",
-    settings: "emblem-system-symbolic",
-    themes: "preferences-desktop-theme-symbolic",
-    tick: "object-select-symbolic",
-    time: "hourglass-symbolic",
-    toolbars: "toolbars-symbolic",
-    warning: "dialog-warning-symbolic",
-    avatar: "avatar-default-symbolic",
-    arrow: {
-      right: "pan-end-symbolic",
-      left: "pan-start-symbolic",
-      down: "pan-down-symbolic",
-      up: "pan-up-symbolic",
-    },
   },
   audio: {
     mic: {
@@ -56,42 +27,13 @@ export default {
     },
     mixer: "mixer-symbolic",
   },
-  powerprofile: {
-    balanced: "power-profile-balanced-symbolic",
-    "power-saver": "power-profile-power-saver-symbolic",
-    performance: "power-profile-performance-symbolic",
-  },
-  battery: {
-    charging: "battery-flash-symbolic",
-    warning: "battery-empty-symbolic",
-  },
   bluetooth: {
     enabled: "bluetooth-active-symbolic",
     disabled: "bluetooth-disabled-symbolic",
-  },
-  brightness: {
-    indicator: "display-brightness-symbolic",
-    keyboard: "keyboard-brightness-symbolic",
-    screen: "display-brightness-symbolic",
-  },
-  powermenu: {
-    sleep: "weather-clear-night-symbolic",
-    reboot: "system-reboot-symbolic",
-    logout: "system-log-out-symbolic",
-    shutdown: "system-shutdown-symbolic",
   },
   notifications: {
     noisy: "org.gnome.Settings-notifications-symbolic",
     silent: "notifications-disabled-symbolic",
     message: "chat-bubbles-symbolic",
-  },
-  trash: {
-    full: "user-trash-full-symbolic",
-    empty: "user-trash-symbolic",
-  },
-  system: {
-    cpu: "org.gnome.SystemMonitor-symbolic",
-    ram: "drive-harddisk-solidstate-symbolic",
-    temp: "temperature-symbolic",
   },
 };

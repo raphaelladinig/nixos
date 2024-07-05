@@ -25,31 +25,30 @@ function notificationIcon({ app_entry, app_icon, image }: Notification) {
 
 function notification(n: Notification) {
   const icon = Widget.Box({
-    vpack: "start",
     class_name: "icon",
+    vpack: "start",
     children: [notificationIcon(n)],
   });
 
   const title = Widget.Label({
     class_name: "title",
+    label: n.summary,
     xalign: 0,
     justification: "left",
-    hexpand: true,
-    max_width_chars: 24,
-    truncate: "end",
-    wrap: true,
-    label: n.summary,
     use_markup: true,
+    wrap: true,
+    truncate: "end",
+    max_width_chars: 24,
   });
 
   const body = Widget.Label({
     class_name: "body",
-    hexpand: true,
-    use_markup: true,
+    label: n.body,
     xalign: 0,
     justification: "left",
-    label: n.body,
+    use_markup: true,
     wrap: true,
+    max_width_chars: 24,
   });
 
   const actions = Widget.Box({
@@ -61,7 +60,6 @@ function notification(n: Notification) {
           n.invoke(id);
           n.dismiss();
         },
-        hexpand: true,
         child: Widget.Label(label),
       }),
     ),

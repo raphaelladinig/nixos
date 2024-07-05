@@ -1,0 +1,54 @@
+.notification-popups .notifications {
+  padding: 0.5em;
+
+  .icon {
+    min-width: 68px;
+    min-height: 68px;
+    margin-right: 1em;
+
+    image {
+      font-size: 58px;
+      margin: 5px;
+      color: $fg;
+    }
+
+    box {
+      min-width: 68px;
+      min-height: 68px;
+      border-radius: 7px;
+    }
+  }
+
+  .notification {
+    min-width: 400px;
+    border-radius: $radius * 2;
+    padding: 1em;
+    margin: 0.5em;
+    border: $border;
+    background-color: $bg;
+  }
+
+  .title {
+    color: $fg;
+    font-size: 1.4em;
+  }
+
+  .body {
+    color: transparentize($fg, 0.4);
+  }
+
+  .actions {
+    .action-button {
+      margin-top: 0.8em;
+      margin-bottom: 2em;
+    }
+
+    .action-button:first-child {
+      margin-left: 0;
+    }
+
+    .action-button:last-child {
+      margin-right: 0;
+    }
+  }
+}

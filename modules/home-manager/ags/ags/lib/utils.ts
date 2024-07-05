@@ -21,3 +21,13 @@ export function icon(name: string | null, fallback = icons.missing) {
 
   return fallback;
 }
+
+export function wrap(inputString: string, width: number): string {
+    let result = '';
+    while (inputString.length > width) {
+        result += inputString.substring(0, width) + '\n';
+        inputString = inputString.substring(width);
+    }
+    result += inputString;
+    return result;
+}

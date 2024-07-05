@@ -16,5 +16,7 @@ export default {
   },
   notifications: {
     popupTimeout: 5000,
+    width: "500px",
+    wrap: 40,
   }
 };

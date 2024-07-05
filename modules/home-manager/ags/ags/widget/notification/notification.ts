@@ -1,5 +1,8 @@
 import { type Notification } from "types/service/notifications";
+import { wrap } from "lib/utils";
 import icons from "icons";
+import options from "options";
+
 
 function notificationIcon({ app_entry, app_icon, image }: Notification) {
   if (image) {
@@ -34,19 +37,15 @@ export default (n: Notification) => {
     xalign: 0,
     justification: "left",
     use_markup: true,
-    wrap: true,
     truncate: "end",
-    max_width_chars: 24,
   });
 
   const body = Widget.Label({
     class_name: "body",
-    label: n.body,
+    label: wrap(n.body, options.notifications.wrap),
     xalign: 0,
     justification: "left",
     use_markup: true,
-    wrap: true,
-    max_width_chars: 24,
   });
 
   const actions = Widget.Box({
@@ -54,6 +53,7 @@ export default (n: Notification) => {
     children: n.actions.map(({ id, label }) =>
       Widget.Button({
         class_name: "action-button",
+        hexpand: true,
         on_clicked: () => {
           n.invoke(id);
           n.dismiss();
@@ -63,19 +63,16 @@ export default (n: Notification) => {
     ),
   });
 
-  return Widget.Box({
+  return Widget.EventBox({
+    on_primary_click: n.dismiss,
     attribute: { id: n.id },
-    hpack: "end",
-    child: Widget.EventBox({
-      on_primary_click: n.dismiss,
-      child: Widget.Box(
-        {
-          class_name: `notification ${n.urgency}`,
-          vertical: true,
-        },
-        Widget.Box([icon, Widget.Box({ vertical: true }, title, body)]),
-        actions,
-      ),
-    }),
+    child: Widget.Box(
+      {
+        class_name: `notification ${n.urgency}`,
+        vertical: true,
+      },
+      Widget.Box([icon, Widget.Box({ vertical: true }, title, body)]),
+      actions,
+    ),
   });
 };

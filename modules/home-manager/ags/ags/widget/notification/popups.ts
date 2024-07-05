@@ -4,24 +4,81 @@ import options from "options";
 const notifications = await Service.import("notifications");
 notifications.popupTimeout = options.notifications.popupTimeout;
 
-export default (monitor: number) => {
-  const list = Widget.Box({
-    vertical: true,
-    children: notifications.popups.map(Notification),
+const transition = 200;
+const { timeout, idle } = Utils;
+
+function animated(id: number) {
+  const n = notifications.getNotification(id)!;
+  const widget = Notification(n);
+
+  const inner = Widget.Revealer({
+    transition: "slide_left",
+    transition_duration: transition,
+    child: widget,
   });
 
-  function onNotified(_: unknown, id: number) {
-    const n = notifications.getNotification(id);
-    if (n) list.children = [Notification(n), ...list.children];
-  }
+  const outer = Widget.Revealer({
+    transition: "slide_down",
+    transition_duration: transition,
+    child: inner,
+  });
 
-  function onDismissed(_: unknown, id: number) {
-    list.children.find((n) => n.attribute.id === id)?.destroy();
+  const box = Widget.Box({
+    hpack: "end",
+    child: outer,
+  });
+
+  idle(() => {
+    outer.reveal_child = true;
+    timeout(transition, () => {
+      inner.reveal_child = true;
+    });
+  });
+
+  return Object.assign(box, {
+    dismiss() {
+      inner.reveal_child = false;
+      timeout(transition, () => {
+        outer.reveal_child = false;
+        timeout(transition, () => {
+          box.destroy();
+        });
+      });
+    },
+  });
+}
+
+export default (monitor: number) => {
+  const map: Map<number, ReturnType<typeof animated>> = new Map();
+
+  const list = Widget.Box({
+    vertical: true,
+    css: `min-width: ${options.notifications.width};`,
+  });
+
+  function remove(_: unknown, id: number) {
+    map.get(id)?.dismiss();
+    map.delete(id);
   }
 
   list
-    .hook(notifications, onNotified, "notified")
-    .hook(notifications, onDismissed, "dismissed");
+    .hook(
+      notifications,
+      (_: unknown, id: number) => {
+        if (id !== undefined) {
+          if (map.has(id)) remove(null, id);
+
+          if (notifications.dnd) return;
+
+          const w = animated(id);
+
+          map.set(id, w);
+          list.children = [w, ...list.children];
+        }
+      },
+      "notified",
+    )
+    .hook(notifications, remove, "dismissed");
 
   return Widget.Window({
     monitor,

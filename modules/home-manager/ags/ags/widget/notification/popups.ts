@@ -1,6 +1,8 @@
 import Notification from "./notification";
+import options from "options";
 
 const notifications = await Service.import("notifications");
+notifications.popupTimeout = options.notifications.popupTimeout;
 
 export default (monitor: number) => {
   const list = Widget.Box({
@@ -23,7 +25,7 @@ export default (monitor: number) => {
 
   return Widget.Window({
     monitor,
-    name: `notifications-${monitor}`,
+    name: `notifications${monitor}`,
     class_name: "notification-popups",
     anchor: ["top", "right"],
     child: Widget.Box({

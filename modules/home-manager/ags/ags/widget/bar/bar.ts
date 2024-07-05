@@ -31,7 +31,7 @@ export default (monitor: number) => {
   return Widget.Window({
     monitor,
     class_name: "bar",
-    name: `bar-${monitor}`,
+    name: `bar${monitor}`,
     anchor: ["top", "left", "right"],
     exclusivity: "exclusive",
     child: Widget.CenterBox({

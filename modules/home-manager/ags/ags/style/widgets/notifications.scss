@@ -1,54 +1,57 @@
-.notification-popups .notifications {
-  padding: 0.5em;
+.notification-popups {
+  .notifications {
+    transition: $transition;
+    padding: 0.5em;
 
-  .icon {
-    min-width: 68px;
-    min-height: 68px;
-    margin-right: 1em;
-
-    image {
-      font-size: 58px;
-      margin: 5px;
-      color: $fg;
-    }
-
-    box {
+    .icon {
       min-width: 68px;
       min-height: 68px;
-      border-radius: 7px;
-    }
-  }
+      margin-right: 1em;
 
-  .notification {
-    min-width: 400px;
-    border-radius: $radius * 2;
-    padding: 1em;
-    margin: 0.5em;
-    border: $border;
-    background-color: $bg;
-  }
+      image {
+        font-size: 58px;
+        margin: 5px;
+        color: $fg;
+      }
 
-  .title {
-    color: $fg;
-    font-size: 1.4em;
-  }
-
-  .body {
-    color: transparentize($fg, 0.4);
-  }
-
-  .actions {
-    .action-button {
-      margin-top: 0.8em;
-      margin-bottom: 2em;
+      box {
+        min-width: 68px;
+        min-height: 68px;
+        border-radius: 7px;
+      }
     }
 
-    .action-button:first-child {
-      margin-left: 0;
+    .notification {
+      min-width: 400px;
+      border-radius: $radius * 2;
+      padding: 1em;
+      margin: 0.5em;
+      border: $border;
+      background-color: $bg;
     }
 
-    .action-button:last-child {
-      margin-right: 0;
+    .title {
+      color: $fg;
+      font-size: 1.4em;
+    }
+
+    .body {
+      color: transparentize($fg, 0.4);
+    }
+
+    .actions {
+      .action-button {
+        margin-top: 0.8em;
+        margin-bottom: 2em;
+      }
+
+      .action-button:first-child {
+        margin-left: 0;
+      }
+
+      .action-button:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

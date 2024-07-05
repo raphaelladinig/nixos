@@ -66,11 +66,11 @@ export default (n: Notification) => {
   return Widget.Box({
     attribute: { id: n.id },
     hpack: "end",
-    class_name: `notification ${n.urgency}`,
     child: Widget.EventBox({
       on_primary_click: n.dismiss,
       child: Widget.Box(
         {
+          class_name: `notification ${n.urgency}`,
           vertical: true,
         },
         Widget.Box([icon, Widget.Box({ vertical: true }, title, body)]),
@@ -78,4 +78,4 @@ export default (n: Notification) => {
       ),
     }),
   });
-}
+};

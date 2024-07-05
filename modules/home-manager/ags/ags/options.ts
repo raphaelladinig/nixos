@@ -14,4 +14,7 @@ export default {
   bar: {
     workspaces: 10,
   },
+  notifications: {
+    popupTimeout: 5000,
+  }
 };

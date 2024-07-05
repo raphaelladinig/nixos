@@ -4,7 +4,7 @@ import options from "options";
 const notifications = await Service.import("notifications");
 notifications.popupTimeout = options.notifications.popupTimeout;
 
-const transition = 200;
+const transition = options.notifications.transition;
 const { timeout, idle } = Utils;
 
 function animated(id: number) {
@@ -53,7 +53,6 @@ export default (monitor: number) => {
 
   const list = Widget.Box({
     vertical: true,
-    css: `min-width: ${options.notifications.width};`,
   });
 
   function remove(_: unknown, id: number) {

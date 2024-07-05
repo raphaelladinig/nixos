@@ -3,7 +3,6 @@ import { wrap } from "lib/utils";
 import icons from "icons";
 import options from "options";
 
-
 function notificationIcon({ app_entry, app_icon, image }: Notification) {
   if (image) {
     return Widget.Box({
@@ -69,6 +68,7 @@ export default (n: Notification) => {
     child: Widget.Box(
       {
         class_name: `notification ${n.urgency}`,
+        css: `min-width: ${options.notifications.width};`,
         vertical: true,
       },
       Widget.Box([icon, Widget.Box({ vertical: true }, title, body)]),

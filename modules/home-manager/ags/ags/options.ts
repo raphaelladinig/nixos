@@ -18,5 +18,6 @@ export default {
     popupTimeout: 5000,
     width: "500px",
     wrap: 40,
+    transition: 200,
   }
 };

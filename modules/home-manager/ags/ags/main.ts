@@ -1,8 +1,8 @@
 import { forMonitors } from "./lib/utils";
-import "styles/styles";
-import Bar from "./widgets/bar/bar";
-import Osi from "./widgets/osi/osi";
-import Notifications from "./widgets/notifications/notifications";
+import "style/style";
+import Bar from "./widget/bar/bar";
+import Osi from "./widget/osi/osi";
+import Notifications from "./widget/notifications/notifications";
 
 App.config({
   windows: [

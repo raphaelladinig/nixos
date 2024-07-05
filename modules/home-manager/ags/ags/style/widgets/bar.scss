@@ -1,11 +1,15 @@
 .bar {
-  font-size: 14pt;
   background-color: $bg;
-  transition: $transition;
+  color: $fg;
+  font-size: 14pt;
   font-weight: bold;
+  transition: $transition;
+
+  > * {
+    margin: $spacing;
+  }
 
   .workspaces {
-    margin: $spacing $spacing;
     label {
       font-size: 0;
       min-width: 5pt;
@@ -29,15 +33,12 @@
     }
   }
 
-  .system {
-    margin: $spacing $spacing;
-    image {
-      margin: 0 $margin;
-    }
-  }
-
+  .bluetooth,
+  .network,
+  .microphone,
+  .audio,
   .battery {
-    margin: $spacing $spacing;
+    margin: 0 $spacing;
     label {
       margin: 0 $margin;
     }

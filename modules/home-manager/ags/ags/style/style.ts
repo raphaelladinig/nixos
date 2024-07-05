@@ -13,7 +13,7 @@ async function applyScss() {
     const scss = `/tmp/ags/main.scss`;
     const vars = `/tmp/ags/vars.scss`;
     const css = `/tmp/ags/main.css`;
-    const fd = Utils.exec(`fd ".scss" ${App.configDir}/styles`);
+    const fd = Utils.exec(`fd ".scss" ${App.configDir}/style`);
     const files = fd.split(/\s+/);
     const imports = [vars, ...files].map((f) => `@import '${f}';`);
 
@@ -28,5 +28,5 @@ async function applyScss() {
   }
 }
 
-Utils.monitorFile(`${App.configDir}/styles`, applyScss);
+Utils.monitorFile(`${App.configDir}/style`, applyScss);
 await applyScss();

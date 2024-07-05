@@ -7,15 +7,8 @@ export default {
     radius: "5px",
     spacing: "6px",
     transition: "100ms",
-    notificationWidth: "300px",
   },
   bar: {
     workspaces: 10,
-  },
-  osi: {
-    delay: 2000,
-    progress: {
-      frames: 20,
-    },
   },
 };

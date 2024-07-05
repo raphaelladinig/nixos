@@ -1,4 +1,5 @@
 import { type Notification } from "types/service/notifications";
+import icons from "icons";
 
 const notifications = await Service.import("notifications");
 
@@ -13,9 +14,8 @@ function notificationIcon({ app_entry, app_icon, image }: Notification) {
     });
   }
 
-  let icon = "dialog-information-symbolic";
+  let icon = icons.fallback.notification;
   if (Utils.lookUpIcon(app_icon)) icon = app_icon;
-
   if (app_entry && Utils.lookUpIcon(app_entry)) icon = app_entry;
 
   return Widget.Box({
@@ -108,7 +108,6 @@ export default (monitor: number) => {
     class_name: "notification-popups",
     anchor: ["top", "right"],
     child: Widget.Box({
-      css: "min-width: 2px; min-height: 2px;",
       class_name: "notifications",
       vertical: true,
       child: list,

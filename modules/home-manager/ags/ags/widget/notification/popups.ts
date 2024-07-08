@@ -7,7 +7,7 @@ notifications.popupTimeout = options.notifications.popupTimeout;
 const transition = options.notifications.transition;
 const { timeout, idle } = Utils;
 
-function animated(id: number) {
+function popup(id: number) {
   const n = notifications.getNotification(id)!;
   const widget = Notification(n);
 
@@ -49,9 +49,10 @@ function animated(id: number) {
 }
 
 export default (monitor: number) => {
-  const map: Map<number, ReturnType<typeof animated>> = new Map();
+  const map: Map<number, ReturnType<typeof popup>> = new Map();
 
   const list = Widget.Box({
+    class_name: "list",
     vertical: true,
   });
 
@@ -69,7 +70,7 @@ export default (monitor: number) => {
 
           if (notifications.dnd) return;
 
-          const w = animated(id);
+          const w = popup(id);
 
           map.set(id, w);
           list.children = [w, ...list.children];
@@ -81,13 +82,9 @@ export default (monitor: number) => {
 
   return Widget.Window({
     monitor,
-    name: `notifications${monitor}`,
+    name: `notifications-${monitor}`,
     class_name: "notification-popups",
     anchor: ["top", "right"],
-    child: Widget.Box({
-      class_name: "notifications",
-      vertical: true,
-      child: list,
-    }),
+    child: list,
   });
 };

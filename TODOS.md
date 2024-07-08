@@ -5,3 +5,7 @@
 - [ ] fix flake
 - [ ] disco
 - [ ] firefox
+- [ ] extend ags config
+  - [ ] notif center
+  - [ ] control center
+  - [ ] useful widgets (ai, ...)

@@ -41,7 +41,7 @@ export default (n: Notification) => {
 
   const body = Widget.Label({
     class_name: "body",
-    label: wrap(n.body, options.notifications.wrap), // HACK: when using wrap of ags the widget size changes
+    label: wrap(n.body, options.notifications.wrap), // HACK: better than ags wrap
     xalign: 0,
     justification: "left",
     use_markup: true,

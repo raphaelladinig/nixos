@@ -10,7 +10,6 @@ const { timeout, idle } = Utils;
 function popup(id: number) {
   const n = notifications.getNotification(id)!;
   const widget = Notification(n);
-
   const inner = Widget.Revealer({
     transition: "slide_left",
     transition_duration: transition,
@@ -84,7 +83,8 @@ export default (monitor: number) => {
     monitor,
     name: `notifications-${monitor}`,
     class_name: "notification-popups",
-    anchor: ["top", "right"],
+    layer: "overlay",
+    anchor: ["top", "right", "bottom"],
     child: list,
   });
 };

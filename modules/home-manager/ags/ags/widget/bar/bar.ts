@@ -34,6 +34,7 @@ export default (monitor: number) => {
     name: `bar${monitor}`,
     anchor: ["top", "left", "right"],
     exclusivity: "exclusive",
+    layer: "top",
     child: Widget.CenterBox({
       start_widget: Left(),
       center_widget: Center(),

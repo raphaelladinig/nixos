@@ -1,25 +1,34 @@
 { inputs, ... }:
 {
   imports = [ inputs.disko.nixosModules.disko ];
-  
+
   disko.devices = {
     disk = {
-      vdb = {
-        device = "/dev/nvme1n1";
+      main = {
+        device = "/dev/nvme0n1";
         type = "disk";
         content = {
           type = "gpt";
           partitions = {
-            ESP = {
+            esp = {
+              name = "esp";
               type = "EF00";
-              size = "100M";
+              size = "512M";
               content = {
                 type = "filesystem";
                 format = "vfat";
                 mountpoint = "/boot";
               };
             };
+            swap = {
+              name = "swap";
+              size = "32G";
+              content = {
+                type = "swap";
+              };
+            };
             root = {
+              name = "root";
               size = "100%";
               content = {
                 type = "filesystem";

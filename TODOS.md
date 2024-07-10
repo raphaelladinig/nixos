@@ -3,7 +3,7 @@
   - [x] fix notif sizing
   - [x] fix notif anim
 - [ ] fix flake
-  - [ ] disco
+  - [x] disco
 - [ ] firefox
 - [ ] virt-manager
 - [ ] extend ags config

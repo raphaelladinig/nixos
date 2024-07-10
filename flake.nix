@@ -9,20 +9,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nur.url = "github:nix-community/NUR";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
+    { ... }@inputs:
     {
       nixosConfigurations = {
-        inspiron = nixpkgs.lib.nixosSystem {
+        inspiron = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs;
           };
-          modules = [
-            ./hosts/inspiron/configuration.nix
-          ];
+          modules = [ ./hosts/inspiron/configuration.nix ];
         };
       };
     };

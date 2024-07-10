@@ -6,6 +6,7 @@ in
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    ./disko.nix
     ../../modules/nixos/audio.nix
     ../../modules/nixos/network.nix
     ../../modules/nixos/hyprland.nix

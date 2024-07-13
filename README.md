@@ -1,7 +1,3 @@
-<div align="center">
-  <h1>Nixos</h1>
-</div>
-
 # Installing
 
 ```sh

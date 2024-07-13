@@ -41,4 +41,9 @@
       };
     };
   };
+
+  environment.variables = {
+    BROWSER = "${browser}";
+    TERMINAL = "${terminal}";
+  };
 }

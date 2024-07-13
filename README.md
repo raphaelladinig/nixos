@@ -4,29 +4,6 @@
 
 # Installing
 
-Clone this repo:
-
 ```sh
-git clone https://github.com/raphaelladinig/nixos
-cd nixos
+nix run 'github:nix-community/disko#disko-install' -- --flake github:raphaelladinig/nixos#<host> --disk <disk-name> <disk-device>
 ```
-
-Create a host folder for your machine
-
-```sh
-cp -r hosts/default hosts/<your-desired-hostname>
-```
-
-Generate your hardware.nix:
-
-```sh
-nixos-generate-config --show-hardware-config > hosts/<your-desired-hostname>/hardware.nix
-```
-
-Change options.nix to your preferences
-
-Run this to enable flakes and install the flake:
-
-```sh
-NIX_CONFIG="experimental-features = nix-command flakes" 
-sudo nixos-rebuild switch --flake .#<your-desired-hostname>

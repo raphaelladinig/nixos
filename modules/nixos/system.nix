@@ -29,7 +29,5 @@ in
 
   environment.variables = {
     FLAKE = "${flake}";
-    BROWSER = "${browser}";
-    TERMINAL = "${terminal}";
   };
 }

@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let
+  inherit (import ../../options.nix) browser terminal;
+in
 {
   programs.hyprland.enable = true;
 

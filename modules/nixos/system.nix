@@ -1,5 +1,5 @@
 let
-  inherit (import ../../options.nix) flake browser terminal timezone locale;
+  inherit (import ../../options.nix) flake timezone locale;
 in
 {
   nix = {

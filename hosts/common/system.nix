@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  inherit (import ../../config.nix) flake;
+  inherit (import ../../lib/config.nix) flake;
   locale = "en_US.UTF-8";
   timezone = "Europe/Vienna";
 in

@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 
 let
-  inherit (import ../../../config.nix) flake;
+  inherit (import ../../../lib/config.nix) flake;
 in
 {
   home.file = {

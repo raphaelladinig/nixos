@@ -23,6 +23,26 @@
 
   networking.hostName = "inspiron";
 
+  environment.systemPackages = with pkgs; [
+    firefox
+    tokei
+    gnumake
+    cmake
+    python3
+    rustc
+    nodejs
+    neofetch
+    htop
+    pass
+  ];
+
+  programs = {
+    gnupg.agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-tty;
+    };
+  };
+
   systemd.services.fix-touchpad = {
     path = [ pkgs.kmod ];
     serviceConfig.ExecStart = ''${pkgs.systemd}/bin/systemd-inhibit --what=sleep --why="fixing touchpad must finish before sleep" --mode=delay  ${./fix_touchpad.sh}'';

@@ -6,6 +6,10 @@ let
   timezone = "Europe/Vienna";
 in
 {
+  imports = [
+    ../../users/root
+  ];
+
   nix = {
     settings.experimental-features = [
       "nix-command"

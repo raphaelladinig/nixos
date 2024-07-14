@@ -3,7 +3,7 @@
 Clone the config
 
 ```sh
-git clone git@github.com:raphaelladinig/nixos
+git clone https://github.com/raphaelladinig/nixos
 cd nixos
 ```
 
@@ -16,5 +16,5 @@ nix --experimental-features "nix-command flakes" run github:nix-community/disko 
 Install flake
 
 ```sh
-nixos-install --flake .
+nixos-install --flake .#inspiron
 ```

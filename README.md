@@ -1,5 +1,6 @@
 <div align="center">
-    <img width="250" src="./assets/logo.png" />
-    <br />
+    <h1>
+      <img width="250" src="./assets/logo.png" />
+    </h1>
     <p>This repository contains NixOS configuration files.</p>
 </div>

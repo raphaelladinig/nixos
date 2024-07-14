@@ -6,3 +6,4 @@
 
 # Nix-Config
 
+## Structure

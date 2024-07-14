@@ -45,7 +45,7 @@ in
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "bak";
-    users.${username} = import ./home.nix;
+    users.${username} = import ../../users/raphael;
     extraSpecialArgs = {
       inherit inputs;
     };

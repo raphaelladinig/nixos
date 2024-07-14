@@ -44,6 +44,8 @@
           specialArgs = specialArgs;
           modules = [
             inputs.home-manager.nixosModules.home-manager
+            inputs.disko.nixosModules.disko
+            inputs.sops-nix.nixosModules.sops
             ./hosts/inspiron/configuration.nix
           ];
         };

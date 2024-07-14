@@ -6,22 +6,16 @@
 }:
 
 {
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-    inputs.sops-nix.nixosModules.sops
-  ];
-
   programs.zsh.enable = true;
 
   sops = {
-    defaultSopsFile = ./secrets.yaml;
-
     age = {
       keyFile = /home/raphael/.config/sops/age/keys.txt;
     };
 
     secrets = {
-      password = {
+      raphael-password = {
+        sopsFile = ./secrets.yaml;
         neededForUsers = true;
       };
     };
@@ -31,7 +25,7 @@
 
   users.users.raphael = {
     isNormalUser = true;
-    hashedPasswordFile = config.sops.secrets.password.path;
+    hashedPasswordFile = config.sops.secrets.raphael-password.path;
     extraGroups = [
       "wheel"
       "video"

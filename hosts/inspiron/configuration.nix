@@ -1,9 +1,8 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.disko.nixosModules.disko
     ./disko.nix
     ../../users/raphael
     ../common/audio.nix

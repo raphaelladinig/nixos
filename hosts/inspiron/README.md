@@ -3,8 +3,8 @@
 Clone the flake
 
 ```sh
-git clone https://github.com/raphaelladinig/nixos
-cd nixos
+git clone https://github.com/raphaelladinig/nix-config
+cd nix-config
 ```
 
 Format disk
@@ -15,7 +15,7 @@ nix --experimental-features "nix-command flakes" run github:nix-community/disko 
 
 Move the flake to the root partition (so that symlinks work)
 
-Change Directory into the flake and edit options.nix
+Change Directory into the flake and edit vars
 
 Install flake
 

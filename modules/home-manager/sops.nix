@@ -17,11 +17,5 @@ in
     age = {
       keyFile = /home/${username}/.config/sops/age/keys.txt;
     };
-
-    secrets = {
-      ssh-key = {
-        path = "/home/${username}/.ssh/id_ed25519";
-      };
-    };
   };
 }

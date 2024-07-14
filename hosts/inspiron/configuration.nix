@@ -46,7 +46,6 @@ in
     useUserPackages = true;
     backupFileExtension = "bak";
     users.${username} = import ./home.nix;
-    # sharedModules = [ inputs.sops.homeManagerModules.sops ];
     extraSpecialArgs = {
       inherit inputs;
     };

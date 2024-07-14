@@ -9,7 +9,6 @@ in
   };
 
   imports = [
-    ../../modules/home-manager/sops.nix
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/xdg-user-dirs.nix
     ../../modules/home-manager/mpv
@@ -19,6 +18,7 @@ in
     ../../modules/home-manager/lazygit
     ../../modules/home-manager/nvim
     ../../modules/home-manager/git.nix
+    ../../modules/home-manager/ssh
   ];
 
   programs.home-manager.enable = true;

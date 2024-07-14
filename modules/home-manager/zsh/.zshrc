@@ -52,3 +52,6 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# nix-direnv
+eval "$(direnv hook zsh)"

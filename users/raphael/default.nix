@@ -8,7 +8,7 @@
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    inputs.sops.nixosModules.sops
+    inputs.sops-nix.nixosModules.sops
   ];
 
   sops = {

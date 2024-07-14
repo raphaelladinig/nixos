@@ -1,6 +1,7 @@
 <div align="center">
-  <img src="./assets/logo.jpg" />
-  <br />
+  <h1>
+    <img src="./assets/logo.png" />
+  </h1>
 </div>
 
 nixos config

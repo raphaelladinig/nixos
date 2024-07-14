@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 let
   inherit (import ../../config.nix) flake;
   locale = "en_US.UTF-8";
@@ -10,8 +12,16 @@ in
       "flakes"
     ];
   };
-
+  
   nixpkgs.config.allowUnfree = true;
+  
+  environment.systemPackages = with pkgs; [
+    nh 
+  ];
+  
+  environment.variables = {
+    FLAKE = "${flake}";
+  };
 
   time.timeZone = "${timezone}";
 
@@ -27,9 +37,5 @@ in
     LC_PAPER = "${locale}";
     LC_TELEPHONE = "${locale}";
     LC_TIME = "${locale}";
-  };
-
-  environment.variables = {
-    FLAKE = "${flake}";
   };
 }

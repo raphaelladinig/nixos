@@ -4,4 +4,4 @@
   </h1>
 </div>
 
-nixos config
+# Nix-Config

@@ -1,9 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 let
   inherit (import ../../vars) username;
 in
-{
+{ 
+  imports = [
+    inputs.sops-nix.homeManagerModules.sops
+  ];
 
   home.packages = with pkgs; [ sops ];
 

@@ -4,7 +4,7 @@ let
   inherit (import ../../vars) username;
 in
 {
-  imports = [ inputs.sops.nixosModules.sops ];
+  imports = [ inputs.sops-nix.nixosModules.sops ];
 
   environment.systemPackages = with pkgs; [ sops ];
 

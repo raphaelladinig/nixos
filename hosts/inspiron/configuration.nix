@@ -27,7 +27,6 @@ in
 
   users.users.${username} = {
     isNormalUser = true;
-    initalPassword = "password";
     extraGroups = [
       "wheel"
       "video"

@@ -6,7 +6,7 @@ in
   imports = [
     ./hardware-configuration.nix
     inputs.disko.nixosModules.disko
-    ./disko.nix
+    (import ./disko.nix { device = "/dev/nvme0n1"; })
     inputs.home-manager.nixosModules.home-manager
     ../../modules/nixos/audio.nix
     ../../modules/nixos/network.nix

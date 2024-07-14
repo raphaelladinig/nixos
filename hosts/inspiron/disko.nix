@@ -1,7 +1,13 @@
 {
+  device ? throw "Set this to your device",
+  ...
+}:
+
+{
   disko.devices = {
     disk = {
       main = {
+        inherit device;
         type = "disk";
         content = {
           type = "gpt";

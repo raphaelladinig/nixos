@@ -14,8 +14,6 @@
     tokei
     htop
     gnumake
-    python3
-    nodejs
     neofetch
   ];
 

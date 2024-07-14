@@ -4,11 +4,8 @@ let
   inherit (import ../../options.nix) username;
 in
 {
-  imports = [ inputs.sops.homeManagerModules.sops ];
 
-  # home.packages = with pkgs; [
-  #   sops
-  # ];
+  home.packages = with pkgs; [ sops ];
 
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;

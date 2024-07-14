@@ -8,8 +8,14 @@ in
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/nvim/nvim";
   };
 
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
+
   home.packages = with pkgs; [
-    neovim
     nodejs
     tree-sitter
     ripgrep

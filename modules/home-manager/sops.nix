@@ -4,7 +4,7 @@ let
   inherit (import ../../options.nix) username;
 in
 {
-  imports = [ inputs.sops.nixosModules.sops ];
+  imports = [ inputs.sops.homeManagerModules.sops ];
 
   environment.systemPackages = with pkgs; [ sops ];
 
@@ -17,7 +17,9 @@ in
     };
 
     secrets = {
-      ssh-key = { };
+      "ssh-key" = {
+        path = "home/${username}/.ssh/id_ed25519";
+      };
     };
   };
 }

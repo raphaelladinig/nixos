@@ -11,7 +11,7 @@
     inputs.sops-nix.nixosModules.sops
   ];
   
-  # programs.zsh.enable = true;
+  programs.zsh.enable = true;
 
   sops = {
     defaultSopsFile = ./secrets.yaml;

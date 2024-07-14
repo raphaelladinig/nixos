@@ -1,13 +1,20 @@
 # Installing
 
+Clone the config
+
+```sh
+git clone git@github.com:raphaelladinig/nixos
+cd nixos
+```
+
 Format disk
 
 ```sh
-nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /tmp/disk-config.nix
+nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./hosts/inspiron/disko.nix
 ```
 
 Install flake
 
 ```sh
-nixos-install --flake "github:raphaelladinig/nixos#inspiron"
+nixos-install --flake .
 ```

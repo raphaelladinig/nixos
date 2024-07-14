@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 
 let
-  inherit (import ../../options.nix) username;
+  inherit (import ../../vars) username;
 in
 {
   imports = [ inputs.sops.nixosModules.sops ];

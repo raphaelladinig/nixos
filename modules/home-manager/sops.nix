@@ -16,8 +16,8 @@ in
     };
 
     secrets = {
-      "ssh-key" = {
-        path = "home/${username}/.ssh/id_ed25519";
+      ssh-key = {
+        path = "/home/${username}/.ssh/id_ed25519";
       };
     };
   };

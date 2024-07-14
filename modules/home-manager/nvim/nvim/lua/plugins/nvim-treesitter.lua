@@ -25,7 +25,6 @@ return {
         "json",
         "diff",
         "xml",
-        "java",
         "nix",
       },
       auto_install = false,

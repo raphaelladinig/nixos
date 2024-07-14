@@ -7,7 +7,7 @@ in
   imports = [ ../sops.nix ];
 
   home.file = {
-    ".ssh/ssh.pub".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/ssh/ssh.pub";
+    ".ssh/ssh.pub".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/raphael/ssh/ssh.pub";
   };
 
   sops = {

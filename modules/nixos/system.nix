@@ -1,5 +1,5 @@
 let
-  inherit (import ../../options.nix) flake timezone locale;
+  inherit (import ../../vars) flake timezone locale;
 in
 {
   nix = {

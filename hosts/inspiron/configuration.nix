@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  inherit (import ../../options.nix) username hashedPassword;
+  inherit (import ../../vars) username hashedPassword;
 in
 {
   imports = [

@@ -24,6 +24,13 @@
 
   networking.hostName = "inspiron";
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
   systemd.services.fix-touchpad = {
     path = [ pkgs.kmod ];
     serviceConfig.ExecStart = ''${pkgs.systemd}/bin/systemd-inhibit --what=sleep --why="fixing touchpad must finish before sleep" --mode=delay  ${./fix_touchpad.sh}'';
@@ -35,10 +42,6 @@
     ];
     after = [ "post-resume.target" ];
   };
-
-  hardware.graphics.enable = true;
-
-  boot.initrd.kernelModules = [ "amdgpu" ];
 
   system.stateVersion = "24.05";
 }

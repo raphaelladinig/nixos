@@ -12,13 +12,11 @@ in
       "flakes"
     ];
   };
-  
+
   nixpkgs.config.allowUnfree = true;
-  
-  environment.systemPackages = with pkgs; [
-    nh 
-  ];
-  
+
+  environment.systemPackages = with pkgs; [ nh ];
+
   environment.variables = {
     FLAKE = "${flake}";
   };

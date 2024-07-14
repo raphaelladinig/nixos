@@ -21,14 +21,31 @@
   };
 
   outputs =
-    { ... }@inputs:
+    inputs:
+    let
+      forEachSystem = inputs.nixpkgs.lib.genAttrs [ "x86_64-linux" ];
+      specialArgs = {
+        inherit inputs;
+      };
+    in
     {
+      formatter = forEachSystem (system: inputs.nixpkgs.legacyPackages.${system}.nixfmt-rfc-style);
+
+      devShells = forEachSystem (
+        system:
+        let
+          pkgs = inputs.nixpkgs.legacyPackages.${system};
+        in
+        import ./shell.nix { inherit pkgs; }
+      );
+
       nixosConfigurations = {
         inspiron = inputs.nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs;
-          };
-          modules = [ ./hosts/inspiron/configuration.nix ];
+          specialArgs = specialArgs;
+          modules = [
+            inputs.home-manager.nixosModules.home-manager
+            ./hosts/inspiron/configuration.nix
+          ];
         };
       };
     };

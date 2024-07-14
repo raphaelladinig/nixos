@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    pass
-  ];
+  environment.systemPackages = with pkgs; [ pass ];
 
   programs = {
     gnupg.agent = {

@@ -5,7 +5,7 @@ let
 in
 {
   home.file = {
-    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/kitty/kitty";
+    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/kitty/kitty";
   };
 
   home.packages = with pkgs; [

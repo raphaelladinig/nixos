@@ -5,7 +5,7 @@ let
 in
 {
   home.file = {
-    ".config/yazi".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/yazi/yazi";
+    ".config/yazi".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/yazi/yazi";
   };
 
   home.packages = with pkgs; [ yazi ];

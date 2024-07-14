@@ -5,7 +5,7 @@ let
 in
 {
   home.file = {
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/nvim/nvim";
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/nvim/nvim";
   };
 
   programs.neovim = {

@@ -5,7 +5,7 @@ let
 in
 {
   home.file = {
-    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/hyprland/hypr";
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/hyprland/hypr";
   };
 
   home.packages = with pkgs; [

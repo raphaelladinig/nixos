@@ -5,7 +5,7 @@ let
 in
 {
   home.file = {
-    ".config/bluetuith".source = config.lib.file.mkOutOfStoreSymlink "${flake}/modules/home-manager/bluetuith/bluetuith";
+    ".config/bluetuith".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/bluetuith/bluetuith";
   };
 
   home.packages = with pkgs; [ bluetuith ];

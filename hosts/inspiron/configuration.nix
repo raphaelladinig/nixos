@@ -6,13 +6,13 @@
     inputs.disko.nixosModules.disko
     ./disko.nix
     ../../users/raphael
-    ../../modules/nixos/audio.nix
-    ../../modules/nixos/network.nix
-    ../../modules/nixos/hyprland.nix
-    ../../modules/nixos/system.nix
-    ../../modules/nixos/bluetooth.nix
-    ../../modules/nixos/virtualisation.nix
-    ../../modules/nixos/power-management.nix
+    ../common/audio.nix
+    ../common/network.nix
+    ../common/hyprland.nix
+    ../common/system.nix
+    ../common/bluetooth.nix
+    ../common/virtualisation.nix
+    ../common/power-management.nix
   ];
 
   boot.loader.grub = {

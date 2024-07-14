@@ -1,7 +1,7 @@
 { config, ... }:
 
 let
-  inherit (import ../../../vars) username flake;
+  inherit (import ../../../vars) flake;
 in
 {
   imports = [ ../sops.nix ];
@@ -13,7 +13,7 @@ in
   sops = {
     secrets = {
       ssh-key = {
-        path = "/home/${username}/.ssh/ssh";
+        path = "/home/raphael/.ssh/ssh";
       };
     };
   };

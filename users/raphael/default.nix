@@ -1,25 +1,31 @@
+{ inputs, pkgs, ... }:
 let
-  inherit (import ../../vars) username;
+  inherit (import ../../vars) hashedPassword;
 in
 {
-  home = {
-    username = "${username}";
-    homeDirectory = "/home/${username}";
-    stateVersion = "24.05";
+  imports = [ inputs.home-manager.nixosModules.home-manager ];
+
+  users.users.raphael = {
+    hashedPassword = hashedPassword;
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "video"
+      "audio"
+      "input"
+      "networkmanager"
+      "libvirtd"
+    ];
+    shell = pkgs.zsh;
   };
 
-  imports = [
-    ../../modules/home-manager/hyprland
-    ../../modules/home-manager/xdg-user-dirs.nix
-    ../../modules/home-manager/mpv
-    ../../modules/home-manager/zsh
-    ../../modules/home-manager/bluetuith
-    ../../modules/home-manager/kitty
-    ../../modules/home-manager/lazygit
-    ../../modules/home-manager/nvim
-    ../../modules/home-manager/git.nix
-    ../../modules/home-manager/ssh
-  ];
-
-  programs.home-manager.enable = true;
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    backupFileExtension = "bak";
+    users.raphael = import ./home.nix;
+    extraSpecialArgs = {
+      inherit inputs;
+    };
+  };
 }

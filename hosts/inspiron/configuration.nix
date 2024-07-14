@@ -1,16 +1,12 @@
 { inputs, pkgs, ... }:
-let
-  inherit (import ../../vars) username hashedPassword;
-in
+
 {
   imports = [
     ./hardware-configuration.nix
     inputs.disko.nixosModules.disko
     ./disko.nix
-    inputs.home-manager.nixosModules.home-manager
     ../../modules/nixos/audio.nix
     ../../modules/nixos/network.nix
-    ../../modules/nixos/sops.nix
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/system.nix
     ../../modules/nixos/bluetooth.nix
@@ -26,30 +22,6 @@ in
   };
 
   networking.hostName = "inspiron";
-
-  users.users.${username} = {
-    hashedPassword = hashedPassword;
-    isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "video"
-      "audio"
-      "input"
-      "networkmanager"
-      "libvirtd"
-    ];
-    shell = pkgs.zsh;
-  };
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    backupFileExtension = "bak";
-    users.${username} = import ../../users/raphael;
-    extraSpecialArgs = {
-      inherit inputs;
-    };
-  };
 
   environment.systemPackages = with pkgs; [
     nh

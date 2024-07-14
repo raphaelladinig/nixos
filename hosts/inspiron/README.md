@@ -13,12 +13,11 @@ Format disk
 nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./hosts/inspiron/disko.nix
 ```
 
-Move the flake to the root partition (so that symlinks work)
+Move the flake to the new root partition (so that symlinks work)
 
-Change Directory into the flake and edit vars
-
-Install flake
+Change directory & Install flake
 
 ```sh
+cd <path-to-flake>
 nixos-install --flake .#inspiron
 ```

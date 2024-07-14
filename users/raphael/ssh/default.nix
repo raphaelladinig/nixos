@@ -12,7 +12,7 @@ in
 
   sops = {
     secrets = {
-      ssh-key = {
+      id_ed25519 = {
         path = "/home/raphael/.ssh/id_ed25519";
       };
     };

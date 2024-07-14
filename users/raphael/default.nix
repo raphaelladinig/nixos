@@ -1,14 +1,35 @@
-{ inputs, pkgs, ... }:
-
-let
-  inherit (import ../../vars) hashedPassword;
-in
 {
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
+
+{
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+    inputs.sops.nixosModules.sops
+  ];
+
+  sops = {
+    defaultSopsFile = ./secrets.yaml;
+
+    age = {
+      keyFile = /home/raphael/.config/sops/age/keys.txt;
+    };
+
+    secrets = {
+      password = {
+        neededForUsers = true;
+      };
+    };
+  };
+
+  users.mutableUsers = false;
 
   users.users.raphael = {
-    hashedPassword = hashedPassword;
     isNormalUser = true;
+    hashedPassword = config.sops.secrets.password.path;
     extraGroups = [
       "wheel"
       "video"

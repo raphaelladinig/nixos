@@ -1,8 +1,5 @@
 { pkgs, ... }:
 
-let
-  inherit (import ../../options.nix) browser terminal;
-in
 {
   programs.hyprland.enable = true;
 
@@ -46,7 +43,7 @@ in
   };
 
   environment.variables = {
-    BROWSER = "${browser}";
-    TERMINAL = "${terminal}";
+    BROWSER = "firefox";
+    TERMINAL = "kitty";
   };
 }

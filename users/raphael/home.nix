@@ -6,7 +6,6 @@
   };
 
   imports = [
-    ./ssh
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/xdg-user-dirs.nix
     ../../modules/home-manager/mpv

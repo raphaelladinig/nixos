@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     inputs.disko.nixosModules.disko
     ./disko.nix
+    ../../users/raphael
     ../../modules/nixos/audio.nix
     ../../modules/nixos/network.nix
     ../../modules/nixos/hyprland.nix

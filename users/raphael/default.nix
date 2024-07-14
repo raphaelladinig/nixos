@@ -1,4 +1,5 @@
 { inputs, pkgs, ... }:
+
 let
   inherit (import ../../vars) hashedPassword;
 in

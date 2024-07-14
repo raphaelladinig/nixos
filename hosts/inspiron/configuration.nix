@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  inherit (import ../../options.nix) username;
+  inherit (import ../../options.nix) username hashedPassword;
 in
 {
   imports = [
@@ -27,6 +27,7 @@ in
   networking.hostName = "inspiron";
 
   users.users.${username} = {
+    hashedPassword = hashedPassword;
     isNormalUser = true;
     extraGroups = [
       "wheel"

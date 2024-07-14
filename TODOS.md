@@ -4,6 +4,7 @@
   - [x] fix notif anim
 - [ ] fix flake
   - [x] disco
+  - [ ] sops
 - [ ] firefox
 - [ ] virt-manager
 - [ ] extend ags config

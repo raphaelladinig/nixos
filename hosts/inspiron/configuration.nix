@@ -10,6 +10,7 @@ in
     inputs.home-manager.nixosModules.home-manager
     ../../modules/nixos/audio.nix
     ../../modules/nixos/network.nix
+    ../../modules/nixos/sops.nix
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/system.nix
     ../../modules/nixos/bluetooth.nix

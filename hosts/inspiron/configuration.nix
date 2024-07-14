@@ -5,6 +5,7 @@ in
 {
   imports = [
     ./hardware-configuration.nix
+    inputs.disko.nixosModules.disko
     ./disko.nix
     inputs.home-manager.nixosModules.home-manager
     ../../modules/nixos/audio.nix

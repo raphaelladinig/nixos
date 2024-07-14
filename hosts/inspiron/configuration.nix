@@ -26,6 +26,7 @@
 
   environment.systemPackages = with pkgs; [
     nh
+    sops
     firefox
     tokei
     gnumake

@@ -1,5 +1,7 @@
 let
-  inherit (import ../../vars) flake timezone locale;
+  inherit (import ../../config.nix) flake;
+  locale = "en_US.UTF-8";
+  timezone = "Europe/Vienna";
 in
 {
   nix = {
@@ -12,7 +14,7 @@ in
   nixpkgs.config.allowUnfree = true;
 
   time.timeZone = "${timezone}";
-  
+
   i18n.defaultLocale = "${locale}";
 
   i18n.extraLocaleSettings = {

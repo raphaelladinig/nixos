@@ -29,7 +29,8 @@
 
   users.users.raphael = {
     isNormalUser = true;
-    hashedPassword = config.sops.secrets.password.path;
+    # hashedPassword = config.sops.secrets.password.path;
+    password = "test";
     extraGroups = [
       "wheel"
       "video"

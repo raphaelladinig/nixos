@@ -13,3 +13,9 @@
 
 - `raphael`: main user
 - `root`: root user
+
+## Screenshots
+
+### Hyprland
+
+![hyprland.png](./assets/hyprland.png)

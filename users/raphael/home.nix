@@ -26,7 +26,6 @@
     ../common/mpv
     ../common/zsh
     ../common/bluetuith
-    ../common/kitty
     ../common/lazygit
     ../common/nvim
   ];

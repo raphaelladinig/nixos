@@ -1,0 +1,5 @@
+- [ ] fix swappy
+- [ ] fix sops
+- [ ] virtualisation
+- [ ] firefox
+- [ ] proper doc

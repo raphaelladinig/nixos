@@ -32,9 +32,4 @@
       };
     };
   };
-
-  environment.variables = {
-    BROWSER = "firefox";
-    TERMINAL = "kitty";
-  };
 }

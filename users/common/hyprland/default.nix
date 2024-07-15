@@ -23,5 +23,7 @@ in
   imports = [
     ../ags
     ../gtk.nix
+    ../kitty
+    ../firefox
   ];
 }

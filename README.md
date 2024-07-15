@@ -8,3 +8,8 @@
 ## Hosts
 
 - `inspiron`: Dell Inspiron 15 5515 | Laptop Workstation | Hyprland
+
+## Users
+
+- `raphael`: main user
+- `root`: root user

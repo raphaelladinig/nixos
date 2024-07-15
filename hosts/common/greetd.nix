@@ -1,24 +1,16 @@
-{ pkgs, environment ? "bash", ... }:
+{ pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    greetd.greetd
-  ];
-
   services.libinput.enable = true;
 
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${environment}";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet";
       };
     };
   };
-
-  environment.etc."greetd/environments".text = ''
-    bash
-  '';
 
   systemd.services.greetd.serviceConfig = {
     Type = "idle";

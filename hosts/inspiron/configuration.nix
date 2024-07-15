@@ -8,6 +8,7 @@
     ../common/audio.nix
     ../common/network.nix
     ../common/hyprland.nix
+    ../common/greetd.nix
     ../common/system.nix
     ../common/bluetooth.nix
     ../common/virtualisation.nix

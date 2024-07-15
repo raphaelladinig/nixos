@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [ (import ./greetd.nix { environment = "Hyprland"; }) ];
-
   programs.hyprland.enable = true;
 
   xdg.portal = {

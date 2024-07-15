@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  imports = [ (import ./greetd.nix { environment = "Hyprland"; }) ];
+
   programs.hyprland.enable = true;
 
   xdg.portal = {
@@ -14,15 +16,6 @@
   ];
 
   services.libinput.enable = true;
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "agreety --cmd Hyprland";
-      };
-    };
-  };
 
   security.polkit.enable = true;
 

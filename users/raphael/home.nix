@@ -1,6 +1,21 @@
 { pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.sops-nix.homeManagerModules.sops
+    ./ssh
+    ./gpg
+    ./pass
+    ./git.nix
+    ../common/hyprland
+    ../common/xdg-user-dirs.nix
+    ../common/mpv
+    ../common/zsh
+    ../common/bluetuith
+    ../common/lazygit
+    ../common/nvim
+  ];
+
   home = {
     username = "raphael";
     homeDirectory = "/home/raphael";
@@ -15,21 +30,6 @@
     htop
     gnumake
     neofetch
-  ];
-
-  imports = [
-    inputs.sops-nix.homeManagerModules.sops
-    ./ssh
-    ./gpg
-    ./pass
-    ./git.nix
-    ../common/hyprland
-    ../common/xdg-user-dirs.nix
-    ../common/mpv
-    ../common/zsh
-    ../common/bluetuith
-    ../common/lazygit
-    ../common/nvim
   ];
 
   sops = {

@@ -13,7 +13,6 @@ in
     (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
     slurp
     grim
-    swappy
     brightnessctl
     cliphist
     hyprlock
@@ -21,8 +20,9 @@ in
   ];
 
   imports = [
-    ../ags
     ../gtk.nix
+    ../ags
+    ../swappy
     ../kitty
     ../firefox
   ];

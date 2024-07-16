@@ -1,4 +1,5 @@
 - [x] fix swappy
+- [ ] pass
 - [ ] fix sops
 - [ ] virtualisation
 - [ ] firefox

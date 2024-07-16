@@ -1,18 +1,24 @@
-{ config, ... }:
+{ pkgs, ... }:
 
-let
-  inherit (import ../../../lib/config.nix) flake;
-in
 {
-  home.file = {
-    ".gnupg/public.gpg".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/raphael/gpg/public.gpg";
-  };
-
   sops = {
     secrets = {
-      private.gpg = {
-        path = "/home/raphael/.gnupg/private.gpg";
-      };
+      "private.gpg" = { };
     };
+  };
+
+  programs.gpg = {
+    enable = true;
+    publicKeys = [
+      {
+        source = ./public.gpg;
+        trust = 5;
+      }
+    ];
+  };
+
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-tty;
   };
 }

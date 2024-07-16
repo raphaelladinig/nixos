@@ -20,6 +20,8 @@
   imports = [
     inputs.sops-nix.homeManagerModules.sops
     ./ssh
+    ./gpg
+    ./pass
     ./git.nix
     ../common/hyprland
     ../common/xdg-user-dirs.nix

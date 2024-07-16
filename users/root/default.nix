@@ -1,22 +1,5 @@
-{ config, ... }:
-
 {
-  sops = {
-    age = {
-      keyFile = /home/raphael/.config/sops/age/keys.txt;
-    };
-
-    secrets = {
-      root-password = {
-        sopsFile = ./secrets.yaml;
-        neededForUsers = true;
-      };
-    };
-  };
-
-  users.mutableUsers = false;
-
   users.users.root = {
-    hashedPasswordFile = config.sops.secrets.root-password.path;
+    hashedPassword = "$y$j9T$pRkRmanRiGnG4rUsMHx0w/$4RmZjflzzhWpEy.H.jM7MfkOdez4/PnQcMy1ove2srA";
   };
 }

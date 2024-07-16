@@ -1,31 +1,15 @@
 {
   inputs,
   pkgs,
-  config,
   ...
 }:
 
 {
   programs.zsh.enable = true;
 
-  sops = {
-    age = {
-      keyFile = /home/raphael/.config/sops/age/keys.txt;
-    };
-
-    secrets = {
-      raphael-password = {
-        sopsFile = ./secrets.yaml;
-        neededForUsers = true;
-      };
-    };
-  };
-
-  users.mutableUsers = false;
-
   users.users.raphael = {
     isNormalUser = true;
-    hashedPasswordFile = config.sops.secrets.raphael-password.path;
+    hashedPassword = "$y$j9T$pRkRmanRiGnG4rUsMHx0w/$4RmZjflzzhWpEy.H.jM7MfkOdez4/PnQcMy1ove2srA";
     extraGroups = [
       "wheel"
       "video"

@@ -5,7 +5,7 @@
     inputs.sops-nix.homeManagerModules.sops
     ./ssh
     ./gpg
-    ./pass
+    ./gopass
     ./git.nix
     ../common/hyprland
     ../common/xdg-user-dirs.nix

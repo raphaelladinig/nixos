@@ -1,6 +1,6 @@
 <div align="center">
     <h1>
-      <img width="250" src="./assets/logo.png" />
+      <img width="250" src="./docs/logo.png" />
     </h1>
     <p>This repository contains my NixOS configuration files.</p>
 </div>
@@ -18,4 +18,4 @@
 
 ### Hyprland
 
-![hyprland.png](./assets/hyprland.png)
+![hyprland.png](./docs/hyprland.png)

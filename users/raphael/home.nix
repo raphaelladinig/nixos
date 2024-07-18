@@ -4,7 +4,6 @@
   imports = [
     inputs.sops-nix.homeManagerModules.sops
     ./ssh
-    ./gpg
     ./gopass
     ./git.nix
     ../common/hyprland

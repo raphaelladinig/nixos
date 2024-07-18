@@ -10,6 +10,7 @@ in
 
   home.packages = with pkgs; [
     gopass
-    pinentry-tty
+    age
+    git
   ];
 }

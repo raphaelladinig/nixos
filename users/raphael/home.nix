@@ -6,7 +6,6 @@
     ../common/gopass.nix
     ../common/hyprland
     ../common/xdg-user-dirs.nix
-    ../common/mpv
     ../common/zsh
     ../common/lazygit
     ../common/bluetuith

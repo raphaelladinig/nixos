@@ -8,12 +8,6 @@ in
 
   programs = {
     zsh.enable = true;
-
-    direnv = {
-      enable = true;
-      enableZshIntegration = true;
-      nix-direnv.enable = true;
-    };
   };
 
   home.file = {

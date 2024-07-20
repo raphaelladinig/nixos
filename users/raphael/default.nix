@@ -1,23 +1,28 @@
 {
   inputs,
   pkgs,
+  config,
   ...
 }:
-
+let
+  ifGroupExists = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
+in
 {
   programs.zsh.enable = true;
 
   users.users.raphael = {
     isNormalUser = true;
     initialPassword = "raphael";
-    extraGroups = [
-      "wheel"
-      "video"
-      "audio"
-      "input"
-      "networkmanager"
-      "libvirtd"
-    ];
+    extraGroups =
+      [ "wheel" ]
+      ++ ifGroupExists [
+        "video"
+        "audio"
+        "input"
+        "networkmanager"
+        "libvirtd"
+      ];
+
     shell = pkgs.zsh;
   };
 

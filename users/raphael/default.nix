@@ -5,7 +5,7 @@
   ...
 }:
 let
-  ifGroupExists = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
+  inherit (import ../../lib/utils.nix { inherit config; }) ifGroupExists;
 in
 {
   programs.zsh.enable = true;

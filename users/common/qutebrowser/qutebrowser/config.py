@@ -1,10 +1,8 @@
 import os
-from qutebrowser.config.configfiles import ConfigAPI
-from qutebrowser.config.config import ConfigContainer
 from urllib.request import urlopen
 
-config: ConfigAPI = config  # type: ignore[name-defined]
-c: ConfigContainer = c  # type: ignore[name-defined]
+config = config  # type: ignore[name-defined]
+c = c  # type: ignore[name-defined]
 
 # disable autoconfig
 config.load_autoconfig(False)
@@ -30,7 +28,6 @@ c.prompt.radius = 0
 # keybindings
 config.bind(",v", "spawn mpv {url}")
 config.bind(",V", "hint links spawn mpv {hint-url}")
-
 
 # theme
 if not os.path.exists(config.configdir / "theme.py"):

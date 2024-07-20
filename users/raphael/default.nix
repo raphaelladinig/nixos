@@ -9,7 +9,7 @@
 
   users.users.raphael = {
     isNormalUser = true;
-    hashedPassword = "$y$j9T$pRkRmanRiGnG4rUsMHx0w/$4RmZjflzzhWpEy.H.jM7MfkOdez4/PnQcMy1ove2srA";
+    initialPassword = "raphael";
     extraGroups = [
       "wheel"
       "video"

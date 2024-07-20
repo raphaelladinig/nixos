@@ -7,8 +7,6 @@
     nativeBuildInputs = with pkgs; [
       nix
       git
-      sops
-      age
     ];
   };
 }

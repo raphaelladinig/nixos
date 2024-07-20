@@ -1,9 +1,7 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
-    inputs.sops-nix.homeManagerModules.sops
-    ./ssh
     ./gopass
     ./git.nix
     ../common/hyprland
@@ -30,12 +28,4 @@
     gnumake
     neofetch
   ];
-
-  sops = {
-    defaultSopsFile = ./secrets.yaml;
-
-    age = {
-      keyFile = /home/raphael/.config/sops/age/keys.txt;
-    };
-  };
 }

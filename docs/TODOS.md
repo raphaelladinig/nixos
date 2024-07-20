@@ -1,6 +1,8 @@
 - [x] fix swappy
-- [ ] pass
-- [ ] fix sops
-- [ ] virtualisation
+- [x] pass
+- [x] fix sops
+- [ ] encrypt disk
 - [ ] firefox
+- [ ] virtualisation
+- [ ] emacs
 - [ ] proper doc

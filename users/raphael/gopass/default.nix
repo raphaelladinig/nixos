@@ -4,13 +4,12 @@ let
   inherit (import ../../../lib/config.nix) flake;
 in
 {
-  # home.file = {
-  #   ".password-store/".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/raphael/pass/.password-store/";
-  # };
+  home.file = {
+    ".config/gopass/config".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/raphael/gopass/config";
+  };
 
   home.packages = with pkgs; [
     gopass
     age
-    git
   ];
 }

@@ -21,3 +21,5 @@ Change directory & Install flake
 cd /mnt/etc/nixos
 nixos-install --flake .#inspiron
 ```
+
+Setup your secrets

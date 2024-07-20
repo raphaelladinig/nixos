@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./gopass
     ./git.nix
+    ../common/gopass.nix
     ../common/hyprland
     ../common/xdg-user-dirs.nix
     ../common/mpv

@@ -18,7 +18,10 @@
   outputs =
     inputs:
     let
-      forEachSystem = inputs.nixpkgs.lib.genAttrs [ "x86_64-linux" ];
+      forEachSystem = inputs.nixpkgs.lib.genAttrs [
+        "x86_64-linux"
+        "aarch64-linux"
+      ];
 
       specialArgs = {
         inherit inputs;

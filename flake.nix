@@ -19,6 +19,7 @@
     inputs:
     let
       forEachSystem = inputs.nixpkgs.lib.genAttrs [ "x86_64-linux" ];
+
       specialArgs = {
         inherit inputs;
       };

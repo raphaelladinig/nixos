@@ -6,9 +6,7 @@ let
   timezone = "Europe/Vienna";
 in
 {
-  imports = [
-    ../../users/root
-  ];
+  imports = [ ../../users/root ];
 
   nix = {
     settings.experimental-features = [

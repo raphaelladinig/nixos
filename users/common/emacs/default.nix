@@ -8,7 +8,5 @@ in
   #   ".config/mpv".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/mpv/mpv";
   # };
 
-  home.packages = with pkgs; [
-    emacs
-  ];
+  home.packages = with pkgs; [ emacs ];
 }

@@ -24,6 +24,6 @@ in
     ../ags
     ../swappy
     ../kitty
-    ../qutebrowser
+    ../firefox.nix
   ];
 }

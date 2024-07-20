@@ -4,7 +4,6 @@
   imports = [
     ./git.nix
     ../common/gopass.nix
-    ../common/firefox
     ../common/hyprland
     ../common/xdg-user-dirs.nix
     ../common/mpv
@@ -23,6 +22,7 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
+    firefox
     tokei
     htop
     gnumake

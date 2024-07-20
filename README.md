@@ -19,3 +19,9 @@
 ### Hyprland
 
 ![hyprland.png](./docs/hyprland.png)
+
+## Resources
+
+- [Nixos Packages Search](https://search.nixos.org/packages)
+- [Nixos Options Search](https://search.nixos.org/options)
+- [Home Manager Options](https://home-manager-options.extranix.com)

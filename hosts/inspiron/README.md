@@ -22,4 +22,4 @@ cd /mnt/etc/nixos
 nixos-install --flake .#inspiron
 ```
 
-Setup your secrets
+Change password of users & deploy your secrets

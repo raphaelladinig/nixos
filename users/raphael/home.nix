@@ -4,6 +4,7 @@
   imports = [
     ./git.nix
     ../common/gopass.nix
+    ../common/school.nix
     ../common/mpv
     ../common/hyprland
     ../common/xdg-user-dirs.nix

@@ -17,6 +17,7 @@ in
     cliphist
     hyprlock
     wl-clipboard
+    firefox
   ];
 
   imports = [
@@ -24,6 +25,5 @@ in
     ../ags
     ../swappy
     ../kitty
-    ../firefox
   ];
 }

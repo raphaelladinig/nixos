@@ -8,8 +8,8 @@
     ../common/xdg-user-dirs.nix
     ../common/mpv
     ../common/zsh
-    ../common/bluetuith
     ../common/lazygit
+    ../common/bluetuith
     ../common/nvim
   ];
 
@@ -22,7 +22,6 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    firefox
     tokei
     htop
     gnumake

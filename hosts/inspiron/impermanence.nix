@@ -48,10 +48,14 @@
         ".ssh"
         ".mozilla"
         ".local/share/nvim"
+        ".local/state/nvim"
         ".local/share/zinit"
         ".local/share/zoxide"
         ".local/share/gopass"
+        ".local/state/lazygit"
+        ".local/state/yazi"
         ".config/gopass"
+        ".cache"
       ];
     };
   };

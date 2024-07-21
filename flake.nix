@@ -19,8 +19,8 @@
     inputs:
     let
       forEachSystem = inputs.nixpkgs.lib.genAttrs [
-        "x86_64-linux"
         "aarch64-linux"
+        "x86_64-linux"
       ];
 
       specialArgs = {
@@ -41,6 +41,10 @@
       nixosConfigurations = {
         inspiron = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs;
+          pkgs = import inputs.nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
           modules = [
             inputs.home-manager.nixosModules.home-manager
             inputs.disko.nixosModules.disko

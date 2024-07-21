@@ -15,8 +15,6 @@ in
     ];
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   environment.systemPackages = with pkgs; [ nh ];
 
   environment.variables = {

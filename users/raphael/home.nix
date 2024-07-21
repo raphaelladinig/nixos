@@ -26,6 +26,6 @@
     tokei
     htop
     gnumake
-    neofetch
+    fastfetch
   ];
 }

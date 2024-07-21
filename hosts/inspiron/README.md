@@ -1,10 +1,5 @@
 # Installing
 
-enter nix-shell
-
-```sh
-nix-shell
-```
 
 Clone the flake
 
@@ -15,15 +10,13 @@ git clone https://github.com/raphaelladinig/nixos
 cd nixos
 ```
 
-Format disk
+Enter nix-shell
 
 ```sh
-just format-disk inspiron
+nix-shell
 ```
 
-Move the flake to /mnt/etc/nixos (so that symlinks work)
-
-Change directory & Install flake
+Install flake
 
 ```sh
 just install inspiron

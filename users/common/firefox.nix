@@ -16,6 +16,7 @@
       DisableFirefoxScreenshots = true;
       Homepage = {
         URL = "https://start.duckduckgo.com";
+        StartPage = "homepage-locked";
       };
       ShowHomeButton = true;
       NewTabPage = false;

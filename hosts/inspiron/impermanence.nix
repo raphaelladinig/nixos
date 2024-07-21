@@ -33,6 +33,7 @@
       "/etc/nixos"
       "/var/log"
       "/var/lib/bluetooth"
+      "/var/db/sudo"
       "/etc/NetworkManager/system-connections"
     ];
     users.raphael = {

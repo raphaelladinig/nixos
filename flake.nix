@@ -42,10 +42,6 @@
       nixosConfigurations = {
         inspiron = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs;
-          pkgs = import inputs.nixpkgs {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
-          };
           modules = [
             inputs.home-manager.nixosModules.home-manager
             inputs.disko.nixosModules.disko

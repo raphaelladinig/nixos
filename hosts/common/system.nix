@@ -32,4 +32,6 @@ in
     LC_TELEPHONE = "${locale}";
     LC_TIME = "${locale}";
   };
+
+  nixpkgs.config.allowUnfree = true;
 }

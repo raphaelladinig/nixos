@@ -8,5 +8,5 @@ rebuild host:
 format-disk host:
   nix run github:nix-community/disko -- --mode disko ./hosts/{{host}}/disko.nix
 
-install host:
-  nixos-install --flake .#{{host}}
+install host: (format-disk host)
+  nixos-install --no-root-passwd --flake .#{{host}}

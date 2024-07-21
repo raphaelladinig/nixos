@@ -6,6 +6,7 @@
     ./disko.nix
     ../../users/raphael
     ../common/audio.nix
+    ../common/usb.nix
     ../common/network.nix
     ../common/hyprland.nix
     ../common/greetd.nix

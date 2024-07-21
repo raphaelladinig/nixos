@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (import ../../lib/utils.nix { inherit config; }) ifGroupExists;
+  inherit (import ../../lib/ifGroupExists.nix { inherit config; }) ifGroupExists;
 in
 {
   programs.zsh.enable = true;

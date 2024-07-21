@@ -27,5 +27,6 @@
     htop
     gnumake
     fastfetch
+    just
   ];
 }

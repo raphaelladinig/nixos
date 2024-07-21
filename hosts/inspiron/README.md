@@ -1,5 +1,11 @@
 # Installing
 
+enter nix-shell
+
+```sh
+nix-shell
+```
+
 Clone the flake
 
 ```sh
@@ -12,7 +18,7 @@ cd nixos
 Format disk
 
 ```sh
-nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko ./hosts/inspiron/disko.nix
+just format-disk inspiron
 ```
 
 Move the flake to /mnt/etc/nixos (so that symlinks work)
@@ -20,10 +26,7 @@ Move the flake to /mnt/etc/nixos (so that symlinks work)
 Change directory & Install flake
 
 ```sh
-cd /mnt/etc/nixos
-```
-```sh
-nixos-install --flake .#inspiron
+just install inspiron
 ```
 
-Change password of users & deploy your secrets
+Change the passwords of the users & deploy secrets

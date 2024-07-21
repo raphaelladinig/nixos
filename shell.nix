@@ -8,6 +8,7 @@
       vim
       nix
       git
+      just
     ];
   };
 }

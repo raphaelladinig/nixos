@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 let
   inherit (import ../../lib/config.nix) flake;
   locale = "en_US.UTF-8";
@@ -14,8 +12,6 @@ in
       "flakes"
     ];
   };
-
-  environment.systemPackages = with pkgs; [ nh ];
 
   environment.variables = {
     FLAKE = "${flake}";

@@ -6,6 +6,7 @@
     ./disko.nix
     ./impermanence.nix
     ../../users/raphael
+    ../../users/root
     ../common/audio.nix
     ../common/usb.nix
     ../common/network.nix

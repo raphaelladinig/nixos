@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./disko.nix
+    ./impermanence.nix
     ../../users/raphael
     ../common/audio.nix
     ../common/usb.nix

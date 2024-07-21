@@ -52,7 +52,7 @@
           modules = [
             inputs.home-manager.nixosModules.home-manager
             inputs.disko.nixosModules.disko
-            inputs.disko.nixosModules.impermanence
+            inputs.impermanence.nixosModules.impermanence
             ./hosts/inspiron/configuration.nix
           ];
         };

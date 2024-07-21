@@ -101,4 +101,10 @@
   '';
 
   fileSystems."/persist".neededForBoot = true;
+
+  environment.persistence."/persist/system" = {
+    directories = [
+      "/etc/nixos"
+    ];
+  };
 }

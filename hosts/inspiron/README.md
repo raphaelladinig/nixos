@@ -4,6 +4,8 @@ Clone the flake
 
 ```sh
 git clone https://github.com/raphaelladinig/nixos
+```
+```sh
 cd nixos
 ```
 
@@ -19,6 +21,8 @@ Change directory & Install flake
 
 ```sh
 cd /mnt/etc/nixos
+```
+```sh
 nixos-install --flake .#inspiron
 ```
 

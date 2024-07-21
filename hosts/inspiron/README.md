@@ -22,4 +22,8 @@ Install flake
 just install inspiron
 ```
 
+Move the flake to /mnt/persist/etc/nixos
+
+Boot in to the installation
+
 Change the passwords of the users & deploy secrets

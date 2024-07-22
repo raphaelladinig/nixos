@@ -30,7 +30,10 @@
 
   environment.persistence."/persist" = {
     directories = [
-      "/etc/nixos"
+      {
+        directory = "/etc/nixos";
+        user = "raphael";
+      }
       "/var/log"
       "/var/lib/bluetooth"
       "/var/db/sudo"
@@ -52,11 +55,13 @@
         ".local/state/nvim"
         ".local/share/zinit"
         ".local/share/zoxide"
-        ".local/share/gopass"
         ".local/state/lazygit"
         ".local/state/yazi"
         ".config/gopass"
-        ".cache"
+        ".local/share/gopass"
+      ];
+      files = [
+        ".zsh_history"
       ];
     };
   };

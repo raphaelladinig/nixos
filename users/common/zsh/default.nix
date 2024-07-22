@@ -4,15 +4,17 @@ let
   inherit (import ../../../lib/config.nix) flake;
 in
 {
-  imports = [ ../yazi ];
+  imports = [
+    ../starship
+    ../yazi
+    ../nvim
+    ../lazygit
+  ];
 
-  programs = {
-    zsh.enable = true;
-  };
+  programs.zsh.enable = true;
 
   home.file = {
     ".zshrc".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/zsh/.zshrc";
-    ".p10k.zsh".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/zsh/.p10k.zsh";
   };
 
   home.packages = with pkgs; [

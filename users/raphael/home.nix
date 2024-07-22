@@ -9,9 +9,7 @@
     ../common/hyprland
     ../common/xdg-user-dirs.nix
     ../common/zsh
-    ../common/lazygit
     ../common/bluetuith
-    ../common/nvim
   ];
 
   home = {

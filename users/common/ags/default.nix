@@ -15,5 +15,6 @@ in
     fd
     bun
     sassc
+    (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
   ];
 }

@@ -24,7 +24,6 @@
     tokei
     htop
     gnumake
-    fastfetch
     just
   ];
 }

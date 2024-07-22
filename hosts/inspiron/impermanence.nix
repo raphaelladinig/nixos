@@ -18,7 +18,7 @@
         btrfs subvolume delete "$1"
     }
 
-    for i in $(find /btrfs_tmp/old_roots/ -maxdepth 1 -mtime +30); do
+    for i in $(find /btrfs_tmp/old_roots/ -maxdepth 1 -mtime +7); do
         delete_subvolume_recursively "$i"
     done
 
@@ -39,6 +39,10 @@
       "/var/db/sudo"
       "/etc/NetworkManager/system-connections"
     ];
+    files = [
+      "/etc/machine-id"
+    ];
+
     users.raphael = {
       directories = [
         "Desktop"
@@ -60,9 +64,7 @@
         ".config/gopass"
         ".local/share/gopass"
       ];
-      files = [
-        ".zsh_history"
-      ];
+      files = [ ".zsh_history" ];
     };
   };
 }

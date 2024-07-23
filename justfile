@@ -10,3 +10,6 @@ format-disk host:
 
 install host: (format-disk host)
   nixos-install --no-root-passwd --flake .#{{host}}
+
+makeIso output:
+  nix run nixpkgs#nixos-generators -- --format iso --flake .#iso -o {{output}}

@@ -1,5 +1,5 @@
 {
-  description = "nixos config";
+  description = "This flake contains my NixOS configuration files";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -47,6 +47,13 @@
             inputs.disko.nixosModules.disko
             inputs.impermanence.nixosModules.impermanence
             ./hosts/inspiron/configuration.nix
+          ];
+        };
+        iso = inputs.nixpkgs.lib.nixosSystem {
+          specialArgs = specialArgs;
+          modules = [
+            inputs.home-manager.nixosModules.home-manager
+            ./hosts/iso/configuration.nix
           ];
         };
       };

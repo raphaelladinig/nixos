@@ -24,10 +24,10 @@
               resumeDevice = true;
             };
           };
-          luks = {
+          root = {
+            name = "root";
             size = "100%";
             content = {
-              name = "crypted";
               type = "lvm_pv";
               vg = "root_vg";
             };

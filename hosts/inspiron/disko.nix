@@ -24,10 +24,10 @@
               resumeDevice = true;
             };
           };
-          root = {
-            name = "root";
+          luks = {
             size = "100%";
             content = {
+              name = "crypted";
               type = "lvm_pv";
               vg = "root_vg";
             };
@@ -44,12 +44,10 @@
             content = {
               type = "btrfs";
               extraArgs = [ "-f" ];
-
               subvolumes = {
                 "/root" = {
                   mountpoint = "/";
                 };
-
                 "/persist" = {
                   mountOptions = [
                     "subvol=persist"
@@ -57,7 +55,6 @@
                   ];
                   mountpoint = "/persist";
                 };
-
                 "/nix" = {
                   mountOptions = [
                     "subvol=nix"

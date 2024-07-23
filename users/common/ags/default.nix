@@ -1,11 +1,8 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
-let
-  inherit (import ../../../lib/config.nix) flake;
-in
 {
   home.file = {
-    ".config/ags".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/ags/ags";
+    ".config/ags".source = ./ags;
   };
 
   home.packages = with pkgs; [

@@ -1,11 +1,8 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
-let
-  inherit (import ../../../lib/config.nix) flake;
-in
 {
   home.file = {
-    ".config/swappy".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/swappy/swappy";
+    ".config/swappy".source = ./swappy;
   };
 
   home.packages = with pkgs; [ swappy ];

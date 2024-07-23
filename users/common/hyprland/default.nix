@@ -1,11 +1,8 @@
-{ pkgs, config, ... }:
+{ pkgs,  ... }:
 
-let
-  inherit (import ../../../lib/config.nix) flake;
-in
 {
   home.file = {
-    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/hyprland/hypr";
+    ".config/hypr".source = ./hypr;
   };
 
   home.packages = with pkgs; [

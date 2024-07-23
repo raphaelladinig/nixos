@@ -1,11 +1,8 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
-let
-  inherit (import ../../../lib/config.nix) flake;
-in
 {
   home.file = {
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/nvim/nvim";
+    ".config/nvim".source = ./nvim;
   };
 
   programs.neovim = {

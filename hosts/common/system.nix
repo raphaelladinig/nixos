@@ -1,5 +1,4 @@
 let
-  inherit (import ../../lib/config.nix) flake;
   locale = "en_US.UTF-8";
   timezone = "Europe/Vienna";
 in
@@ -11,10 +10,6 @@ in
       "nix-command"
       "flakes"
     ];
-  };
-
-  environment.variables = {
-    FLAKE = "${flake}";
   };
 
   time.timeZone = "${timezone}";

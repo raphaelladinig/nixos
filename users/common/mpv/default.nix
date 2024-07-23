@@ -1,14 +1,9 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
-let
-  inherit (import ../../../lib/config.nix) flake;
-in
 {
   home.file = {
-    ".config/mpv".source = config.lib.file.mkOutOfStoreSymlink "${flake}/users/common/mpv/mpv";
+    ".config/mpv".source =  ./mpv;
   };
 
-  home.packages = with pkgs; [
-    mpv
-  ];
+  home.packages = with pkgs; [ mpv ];
 }

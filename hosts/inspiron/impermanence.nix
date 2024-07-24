@@ -52,6 +52,8 @@
         "Public"
         "Templates"
         "Videos"
+        "Development"
+        "Virtual-Machines"
         ".ssh"
         ".mozilla"
         ".local/share/nvim"

@@ -16,14 +16,15 @@
               mountpoint = "/boot";
             };
           };
-          swap = {
-            name = "swap";
-            size = "32G";
-            content = {
-              type = "swap";
-              resumeDevice = true;
-            };
-          };
+          # swap = {
+          #   name = "swap";
+          #   size = "32G";
+          #   content = {
+          #     type = "swap";
+          #     randomEncryption = true;
+          #     resumeDevice = true;
+          #   };
+          # };
           luks = {
             size = "100%";
             content = {
@@ -65,6 +66,10 @@
                     "noatime"
                   ];
                   mountpoint = "/nix";
+                };
+                "/swap" = {
+                  mountpoint = "/.swapvol";
+                  swap.swapfile.size = "32G";
                 };
               };
             };

@@ -36,6 +36,7 @@
       }
       "/var/log"
       "/var/lib/bluetooth"
+      "/var/lib/libvirt"
       "/var/db/sudo"
       "/etc/NetworkManager/system-connections"
     ];

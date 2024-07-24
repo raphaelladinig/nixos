@@ -24,6 +24,7 @@
     tokei
     htop
     gnumake
+    cryptsetup
     just
   ];
 }

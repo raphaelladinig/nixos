@@ -22,7 +22,7 @@
   outputs =
     inputs:
     let
-      inherit (import ../../lib/forEachSystem.nix { inherit inputs; }) forEachSystem;
+      inherit (import ./lib/forEachSystem.nix { inherit inputs; }) forEachSystem;
 
       specialArgs = {
         inherit inputs;

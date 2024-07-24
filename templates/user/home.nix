@@ -1,6 +1,6 @@
 {
   imports = [ ];
-  
+
   programs.home-manager.enable = true;
 
   home = {

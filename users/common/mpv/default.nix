@@ -2,7 +2,7 @@
 
 {
   home.file = {
-    ".config/mpv".source =  ./mpv;
+    ".config/mpv".source = ./mpv;
   };
 
   home.packages = with pkgs; [ mpv ];

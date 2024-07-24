@@ -6,7 +6,7 @@
   home.file = {
     ".zshrc".source = ./.zshrc;
   };
-  
+
   imports = [
     ../starship
     ../yazi

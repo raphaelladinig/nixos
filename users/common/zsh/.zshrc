@@ -37,7 +37,6 @@ eval "$(zoxide init zsh)"
 # aliases
 alias v="nvim"
 alias g="lazygit"
-alias ls="ls --color"
 
 # yazi
 function yy() {

@@ -16,21 +16,11 @@
               mountpoint = "/boot";
             };
           };
-          # swap = {
-          #   name = "swap";
-          #   size = "32G";
-          #   content = {
-          #     type = "swap";
-          #     randomEncryption = true;
-          #     resumeDevice = true;
-          #   };
-          # };
           luks = {
             size = "100%";
             content = {
               type = "luks";
               name = "crypted";
-              settings.allowDiscards = true;
               content = {
                 type = "lvm_pv";
                 vg = "root_vg";

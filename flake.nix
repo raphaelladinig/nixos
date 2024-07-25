@@ -49,13 +49,6 @@
             ./hosts/inspiron/configuration.nix
           ];
         };
-        iso = inputs.nixpkgs.lib.nixosSystem {
-          specialArgs = specialArgs;
-          modules = [
-            inputs.home-manager.nixosModules.home-manager
-            ./hosts/iso/configuration.nix
-          ];
-        };
       };
     };
 }

@@ -1,7 +1,7 @@
 # Installing
 
 
-Clone the flake
+1. Clone the flake
 
 ```sh
 git clone https://github.com/raphaelladinig/nixos
@@ -10,20 +10,16 @@ git clone https://github.com/raphaelladinig/nixos
 cd nixos
 ```
 
-Enter nix-shell
+2. Enter nix-shell
 
 ```sh
 nix-shell
 ```
 
-Install flake
+3. Install flake
 
 ```sh
 just install inspiron
 ```
 
-Move the flake to /mnt/persist/etc/nixos
-
-Boot in to the installation
-
-Change the passwords of the users & deploy secrets
+4. Boot in to the installation, change the passwords of users & deploy your secrets

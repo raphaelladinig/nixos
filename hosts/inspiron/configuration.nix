@@ -8,11 +8,15 @@
     ../../users/raphael
     ../../users/root
     ../common/audio.nix
+    ../common/sudo.nix
     ../common/usb.nix
     ../common/network.nix
     ../common/hyprland.nix
     ../common/greetd.nix
-    ../common/system.nix
+    (import ../common/system.nix {
+      locale = "en_US.UTF-8";
+      timezone = "Europe/Vienna";
+    })
     ../common/bluetooth.nix
     ../common/virtualisation.nix
     ../common/power-management.nix

@@ -1,7 +1,5 @@
-let
-  locale = "en_US.UTF-8";
-  timezone = "Europe/Vienna";
-in
+{ locale, timezone }:
+
 {
   imports = [ ../../users/root ];
 

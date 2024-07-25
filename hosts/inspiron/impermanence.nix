@@ -37,7 +37,6 @@
       "/var/log"
       "/var/lib/bluetooth"
       "/var/lib/libvirt"
-      "/var/db/sudo"
       "/etc/NetworkManager/system-connections"
     ];
     files = [ "/etc/machine-id" ];

@@ -1,7 +1,7 @@
 # Installing
 
 
-1. Clone the flake
+1. Clone flake
 
 ```sh
 git clone https://github.com/raphaelladinig/nixos

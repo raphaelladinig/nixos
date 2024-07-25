@@ -22,4 +22,4 @@ nix-shell
 just install inspiron
 ```
 
-4. Boot in to the installation, change the passwords of users & deploy your secrets
+4. Boot in to new system, change the passwords of users & deploy secrets

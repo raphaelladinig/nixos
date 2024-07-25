@@ -1,3 +1,8 @@
+# Description
+
+- Dell Inspiron 15 5515
+- LUKS + Impermanence
+
 # Installing
 
 

@@ -11,8 +11,8 @@
 
 ## Users
 
-- `raphael`: main user
-- `root`: root user
+- [`raphael`](./users/raphael/README.md)
+- [`root`](./users/root/README.md)
 
 ## Screenshots
 

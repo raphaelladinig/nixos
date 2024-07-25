@@ -36,12 +36,12 @@
     texlab
     beautysh
     prettierd
-    nodePackages.vscode-html-languageserver-bin
+    # nodePackages.vscode-html-languageserver-bin
     emmet-language-server
-    nodePackages.vscode-css-languageserver-bin
+    # nodePackages.vscode-css-languageserver-bin
     tailwindcss-language-server
     nodePackages.typescript-language-server
-    nodePackages.vscode-json-languageserver
+    # nodePackages.vscode-json-languageserver
     bash-language-server
   ];
 }

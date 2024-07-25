@@ -43,9 +43,6 @@
         inspiron = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs;
           modules = [
-            inputs.home-manager.nixosModules.home-manager
-            inputs.disko.nixosModules.disko
-            inputs.impermanence.nixosModules.impermanence
             ./hosts/inspiron/configuration.nix
           ];
         };

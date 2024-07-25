@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
+    inputs.home-manager.nixosModules.home-manager
+    inputs.disko.nixosModules.disko
+    inputs.impermanence.nixosModules.impermanence
     ./hardware-configuration.nix
     ./disko.nix
     ./impermanence.nix

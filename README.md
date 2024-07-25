@@ -7,7 +7,7 @@
 
 ## Hosts
 
-- `inspiron`: Dell Inspiron 15 5515
+- `[inspiron](./hosts/inspiron/README.md)`: Dell Inspiron 15 5515
 
 ## Users
 

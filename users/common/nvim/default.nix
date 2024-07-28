@@ -1,21 +1,16 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./plugins ];
+  imports = [
+    ./modules/programming/languages/cpp
+    ./modules/programming/languages/lua
+    ./modules/programming/languages/nix
+    ./modules/programming/git
+    ./modules/ux
+  ];
 
   programs.neovim = {
     enable = true;
-
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-
     extraPackages = with pkgs; [ wl-clipboard ];
-
-    extraLuaConfig = ''
-      ${builtins.readFile ./options.lua}
-      ${builtins.readFile ./keymaps.lua}
-      ${builtins.readFile ./misc.lua}
-    '';
   };
 }

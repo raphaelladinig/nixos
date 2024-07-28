@@ -11,7 +11,5 @@
     ];
   };
 
-  home.packages = with pkgs; [
-    vale
-  ];
+  home.packages = with pkgs; [ vale ];
 }

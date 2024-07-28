@@ -4,7 +4,7 @@
   programs.neovim = {
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = gitsigns-nvim;
+        plugin = fidget-nvim;
         type = "lua";
         config = builtins.readFile ./config.lua;
       }

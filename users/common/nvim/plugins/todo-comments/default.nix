@@ -4,10 +4,11 @@
   programs.neovim = {
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = gitsigns-nvim;
+        plugin = todo-comments-nvim;
         type = "lua";
         config = builtins.readFile ./config.lua;
       }
+      plenary-nvim
     ];
   };
 }

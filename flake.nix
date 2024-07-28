@@ -42,9 +42,7 @@
       nixosConfigurations = {
         inspiron = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = specialArgs;
-          modules = [
-            ./hosts/inspiron/configuration.nix
-          ];
+          modules = [ ./hosts/inspiron/configuration.nix ];
         };
       };
     };

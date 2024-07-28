@@ -2,13 +2,22 @@
   imports = [
     ./catppuccin
     ./nvim-treesitter
-    ./nvim-cmp
+    ./nvim-lspconfig
+    ./nvim-dap
     ./conform
-    ./oil
-    ./lualine
-    ./indent-blankline
-    ./telescope
-    ./gitsigns
+    ./nvim-lint
+    ./nvim-cmp
+    ./nvim-autopairs
     ./nvim-surround
+    ./lualine
+    ./oil
+    ./indent-blankline
+    ./gitsigns
+    ./telescope
+    ./comment
+    ./todo-comments
+    ./dressing
+    ./fidget
+    ./toggleterm
   ];
 }

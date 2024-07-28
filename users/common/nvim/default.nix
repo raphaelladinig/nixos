@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   home.file = {
-    ".config/nvim".source = ./nvim;
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/raphael/Development/nixos/users/common/nvim/nvim";
   };
 
   programs.neovim = {
@@ -15,6 +15,7 @@
   home.packages = with pkgs; [
     nodejs
     tree-sitter
+    luarocks
     ripgrep
     gnumake
     cmake

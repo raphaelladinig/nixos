@@ -3,10 +3,10 @@ default:
 
 rebuild host:
   git add *
-  nixos-rebuild switch --flake .#{{host}}
+  sudo nixos-rebuild switch --flake .#{{host}}
 
 format-disk host:
-  nix run github:nix-community/disko -- --mode disko ./hosts/{{host}}/disko.nix
+  sudo nix run github:nix-community/disko -- --mode disko ./hosts/{{host}}/disko.nix
 
 install host: (format-disk host)
-  nixos-install --no-root-passwd --flake .#{{host}}
+  sudo nixos-install --no-root-passwd --flake .#{{host}}

@@ -51,6 +51,7 @@
         "Public"
         "Templates"
         "Videos"
+        "Notes"
         "Development"
         "Virtual-Machines"
         ".ssh"

@@ -1,15 +1,17 @@
 { pkgs, ... }:
 
 {
+  imports = [ ../treesitter ];
+
   programs.neovim = {
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = nvim-treesitter;
+        plugin = neotest;
         type = "lua";
         config = builtins.readFile ./config.lua;
       }
-      nvim-treesitter-context
-      nvim-ts-autotag
+      nvim-nio
+      plenary-nvim
     ];
   };
 }

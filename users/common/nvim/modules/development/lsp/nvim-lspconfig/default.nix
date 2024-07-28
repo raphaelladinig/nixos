@@ -4,12 +4,13 @@
   programs.neovim = {
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = nvim-treesitter;
+        plugin = nvim-lspconfig;
         type = "lua";
         config = builtins.readFile ./config.lua;
       }
-      nvim-treesitter-context
-      nvim-ts-autotag
+      telescope-nvim
+      cmp-nvim-lsp
+      neodev-nvim
     ];
   };
 }

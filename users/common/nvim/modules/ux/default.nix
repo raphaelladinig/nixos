@@ -1,17 +1,19 @@
 {
   imports = [
+    ./CopilotChat
+    ./copilot
     ./toggleterm
     ./oil
     ./lualine
+    ./nvim-treesitter
     ./telescope
     ./dressing
     ./todo-comments
+    ./nvim-cmp
     ./comment
     ./nvim-surround
     ./indent-blankline
     ./nvim-autopairs
-    ./nvim-cmp
-    ./nvim-treesitter
     ./catppuccin
   ];
 

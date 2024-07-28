@@ -1,15 +1,17 @@
 { pkgs, ... }:
 
 {
+  imports = [ ../../../ux/telescope ];
+
   programs.neovim = {
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = nvim-treesitter;
+        plugin = neogit;
         type = "lua";
         config = builtins.readFile ./config.lua;
       }
-      nvim-treesitter-context
-      nvim-ts-autotag
+      plenary-nvim
+      diffview-nvim
     ];
   };
 }

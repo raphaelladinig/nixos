@@ -2,11 +2,12 @@
 
 {
   imports = [
-    ./modules/programming/languages/cpp
-    ./modules/programming/languages/lua
-    ./modules/programming/languages/nix
-    ./modules/programming/git
+    ./modules/development/languages/cpp
+    ./modules/development/languages/lua
+    ./modules/development/languages/nix
+    ./modules/development/git
     ./modules/ux
+    ./modules/notes
   ];
 
   programs.neovim = {

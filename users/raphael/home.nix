@@ -11,6 +11,7 @@
     ../common/xdg-user-dirs.nix
     ../common/zsh
     ../common/bluetuith
+    ../common/davinci-resolve.nix
   ];
 
   home = {

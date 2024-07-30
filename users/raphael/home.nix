@@ -24,6 +24,7 @@
 
   home.packages = with pkgs; [
     tokei
+    tree
     htop
     gnumake
     cryptsetup

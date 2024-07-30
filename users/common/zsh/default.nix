@@ -27,7 +27,7 @@
   imports = [
     ../starship
     ../yazi
-    ../nvim
+    ../neovim
     ../lazygit
   ];
 

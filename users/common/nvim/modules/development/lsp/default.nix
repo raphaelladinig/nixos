@@ -1,6 +1,0 @@
-{
-  imports = [
-    ./nvim-lspconfig
-    ./fidget
-  ];
-}

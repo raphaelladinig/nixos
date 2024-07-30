@@ -1,6 +1,18 @@
 require("neorg").setup({
   load = {
-    ["core.defaults"] = {},
+    ["core.clipboard.code-blocks"] = {},
+    ["core.esupports.hop"] = {},
+    ["core.esupports.indent"] = {},
+    ["core.esupports.metagen"] = {},
+    ["core.itero"] = {},
+    ["core.keybinds"] = {},
+    ["core.looking-glass"] = {},
+    ["core.pivot"] = {},
+    ["core.promo"] = {},
+    ["core.qol.toc"] = {},
+    ["core.qol.todo_items"] = {},
+    ["core.tangle"] = {},
+    ["core.ui.calendar"] = {},
     ["core.concealer"] = {},
     ["core.dirman"] = {
       config = {

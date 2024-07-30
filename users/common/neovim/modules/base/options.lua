@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 vim.opt.clipboard = "unnamedplus"
+vim.opt.conceallevel = 3
 vim.opt.showtabline = 0
 vim.opt.termguicolors = true
 vim.opt.wrap = false

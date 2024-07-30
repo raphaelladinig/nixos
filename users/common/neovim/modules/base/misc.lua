@@ -1,4 +1,4 @@
-vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter", "BufWinEnter" }, {
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
   callback = function()
     vim.opt_local.cursorline = true
   end,

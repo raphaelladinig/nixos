@@ -29,3 +29,10 @@ require("neorg").setup({
     },
   },
 })
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "*.norg" },
+  callback = function()
+    vim.opt_local.conceallevel = 2
+  end,
+})

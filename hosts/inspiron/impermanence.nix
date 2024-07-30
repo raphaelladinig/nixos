@@ -30,16 +30,10 @@
 
   environment.persistence."/persist" = {
     directories = [
-      {
-        directory = "/etc/nixos";
-        user = "raphael";
-      }
-      "/var/log"
       "/var/lib/bluetooth"
       "/var/lib/libvirt"
       "/etc/NetworkManager/system-connections"
     ];
-    files = [ "/etc/machine-id" ];
 
     users.raphael = {
       directories = [

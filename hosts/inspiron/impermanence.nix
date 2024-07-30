@@ -56,14 +56,11 @@
         "Virtual-Machines"
         ".ssh"
         ".mozilla"
-        ".local/share/nvim"
-        ".local/state/nvim"
-        ".local/share/zinit"
-        ".local/share/zoxide"
-        ".local/state/lazygit"
-        ".local/state/yazi"
         ".config/gopass"
         ".local/share/gopass"
+        ".local/share/nvim"
+        ".local/share/zoxide"
+        ".local/state/lazygit"
       ];
       files = [ ".zsh_history" ];
     };

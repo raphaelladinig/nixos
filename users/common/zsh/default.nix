@@ -24,9 +24,7 @@
     ".zshrc".source = ./.zshrc;
   };
 
-  imports = [
-    ../starship
-  ];
+  imports = [ ../starship ];
 
   programs.neovim.enable = true;
 

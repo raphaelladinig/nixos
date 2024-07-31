@@ -27,4 +27,4 @@ nix-shell
 just install inspiron
 ```
 
-4. Boot in to the new system, change the passwords of users and setup secrets and notes.
+4. Boot in to the new system, change the passwords of each user and setup your data.

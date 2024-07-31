@@ -2,13 +2,13 @@
 
 {
   imports = [
-    ./modules/base
-    ./modules/ai
-    ./modules/git
-    ./modules/languages/lua
-    ./modules/languages/nix
-    ./modules/languages/cpp
-    ./modules/languages/markdown
+    ./base
+    # ./ai
+    ./git
+    ./notes
+    ./languages/lua
+    ./languages/nix
+    ./languages/cpp
   ];
 
   programs.neovim = {

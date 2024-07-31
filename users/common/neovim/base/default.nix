@@ -1,6 +1,5 @@
 {
   imports = [
-    ../notes
     ../plugins/toggleterm
     ../plugins/overseer
     ../plugins/trouble

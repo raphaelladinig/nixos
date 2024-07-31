@@ -64,7 +64,6 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
-    { name = "neorg" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
@@ -77,7 +76,6 @@ cmp.setup({
         maxwidth = 50,
         menu = {
           nvim_lsp = "[LSP]",
-          neorg = "[Neorg]",
           luasnip = "[LuaSnip]",
           buffer = "[Buffer]",
           path = "[Path]",

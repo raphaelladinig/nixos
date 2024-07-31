@@ -4,20 +4,15 @@
   programs.neovim = {
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = conform-nvim;
+        plugin = nvim-dap;
         type = "lua";
         config = builtins.readFile ./config.lua;
       }
+      nvim-dap-virtual-text
+      nvim-dap-ui
+      neodev-nvim
+      nvim-nio
+      cmp-dap
     ];
   };
-
-  home.packages = with pkgs; [
-    clang-tools
-    stylua
-    nixfmt-rfc-style
-    black
-    vale
-    beautysh
-    prettierd
-  ];
 }

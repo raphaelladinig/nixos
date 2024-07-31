@@ -6,6 +6,9 @@
     ../common/gopass.nix
     ../common/virt-manager.nix
     ../common/school.nix
+    ../common/yazi
+    ../common/lazygit
+    ../common/neovim
     ../common/mpv
     ../common/hyprland
     ../common/xdg-user-dirs.nix

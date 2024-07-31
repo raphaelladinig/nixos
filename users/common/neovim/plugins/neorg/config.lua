@@ -59,4 +59,4 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
-vim.keymap.set("n", "<leader>n", "<CMD>Neorg index<CR>")
+vim.keymap.set("n", "<leader>N", "<CMD>Neorg index<CR>")

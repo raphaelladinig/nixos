@@ -26,13 +26,14 @@
 
   imports = [
     ../starship
-    ../yazi
-    ../neovim
-    ../lazygit
   ];
+
+  programs.neovim.enable = true;
 
   home.packages = with pkgs; [
     fzf
     zoxide
+    yazi
+    lazygit
   ];
 }

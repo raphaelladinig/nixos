@@ -10,6 +10,7 @@
     ../plugins/dressing
     ../plugins/todo-comments
     ../plugins/comment
+    ../plugins/neotest
     ../plugins/conform
     ../plugins/nvim-lint
     ../plugins/nvim-dap

@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   imports = [
     ./base
@@ -13,6 +11,5 @@
 
   programs.neovim = {
     enable = true;
-    extraPackages = with pkgs; [ wl-clipboard ];
   };
 }

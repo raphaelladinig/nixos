@@ -16,7 +16,7 @@
     ../common/network.nix
     ../common/hyprland.nix
     ../common/greetd.nix
-    (import ../common/system.nix {
+    (import ../common/system-config.nix {
       locale = "en_US.UTF-8";
       timezone = "Europe/Vienna";
     })

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ../treesitter ];
+  imports = [ ../nvim-treesitter ];
 
   programs.neovim = {
     plugins = with pkgs.vimPlugins; [

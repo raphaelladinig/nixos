@@ -12,8 +12,8 @@
     grim
     brightnessctl
     cliphist
-    hyprlock
     wl-clipboard
+    hyprlock
   ];
 
   imports = [

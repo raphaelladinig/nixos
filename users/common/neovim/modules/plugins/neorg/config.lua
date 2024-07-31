@@ -1,19 +1,11 @@
 require("neorg").setup({
   load = {
-    ["core.clipboard.code-blocks"] = {},
-    ["core.esupports.hop"] = {},
-    ["core.esupports.indent"] = {},
-    ["core.esupports.metagen"] = {},
-    ["core.itero"] = {},
-    ["core.keybinds"] = {},
-    ["core.looking-glass"] = {},
-    ["core.pivot"] = {},
-    ["core.promo"] = {},
-    ["core.qol.toc"] = {},
-    ["core.qol.todo_items"] = {},
-    ["core.tangle"] = {},
-    ["core.ui.calendar"] = {},
-    ["core.concealer"] = {},
+    ["core.defaults"] = {},
+    ["core.concealer"] = {
+      config = {
+        folds = false,
+      },
+    },
     ["core.dirman"] = {
       config = {
         workspaces = {
@@ -30,8 +22,8 @@ require("neorg").setup({
   },
 })
 
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "*.norg" },
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = "norg",
   callback = function()
     vim.opt_local.conceallevel = 2
   end,

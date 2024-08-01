@@ -28,12 +28,7 @@
 
   fileSystems."/persist".neededForBoot = true;
 
-  users.users = {
-    root.hashedPasswordFile = "/persist/passwords/root";
-    raphael.hashedPasswordFile = "/persist/passwords/raphael/";
-  };
-
-  environment.persistence."/persist/system" = {
+  environment.persistence."/persist" = {
     directories = [
       "/var/lib/bluetooth"
       "/var/lib/libvirt"

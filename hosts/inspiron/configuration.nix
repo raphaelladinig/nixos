@@ -10,11 +10,11 @@
     ./impermanence.nix
     ../../users/raphael
     ../../users/root
+    ../common/yubikey.nix
     ../common/audio.nix
     ../common/sudo.nix
     ../common/usb.nix
     ../common/network.nix
-    ../common/yubikey.nix
     ../common/hyprland.nix
     ../common/greetd.nix
     (import ../common/system-config.nix {

@@ -28,18 +28,16 @@
 
   fileSystems."/persist".neededForBoot = true;
 
-  environment.persistence."/persist" = {
+  users.users = {
+    root.hashedPasswordFile = "/persist/passwords/root";
+    raphael.hashedPasswordFile = "/persist/passwords/raphael/";
+  };
+
+  environment.persistence."/persist/system" = {
     directories = [
       "/var/lib/bluetooth"
       "/var/lib/libvirt"
       "/etc/NetworkManager/system-connections"
-    ];
-
-    files = [
-      "/etc/passwd"
-      "/etc/shadow"
-      "/etc/group"
-      "/etc/machine-id"
     ];
 
     users.raphael = {
@@ -63,6 +61,7 @@
         ".local/share/zoxide"
         ".local/state/lazygit"
       ];
+
       files = [ ".zsh_history" ];
     };
   };

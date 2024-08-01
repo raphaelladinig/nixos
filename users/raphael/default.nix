@@ -9,7 +9,7 @@ let
 in
 {
   programs.zsh.enable = true;
-
+  
   users.mutableUsers = true;
 
   users.users.raphael = {

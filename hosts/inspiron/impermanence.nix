@@ -37,6 +37,7 @@
 
     files = [
       "/etc/passwd"
+      "/etc/shadow"
       "/etc/group"
       "/etc/machine-id"
     ];

@@ -35,6 +35,12 @@
       "/etc/NetworkManager/system-connections"
     ];
 
+    files = [
+      "/etc/passwd"
+      "/etc/group"
+      "/etc/machine-id"
+    ];
+
     users.raphael = {
       directories = [
         "Desktop"

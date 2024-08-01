@@ -6,7 +6,7 @@ rebuild host:
   sudo nixos-rebuild switch --flake .#{{host}}
 
 format-disk host:
-  sudo nix run github:nix-community/disko -- --mode disko ./hosts/{{host}}/disko.nix
+  sudo nix run --experimental-features "nix-command flakes" github:nix-community/disko -- --mode disko ./hosts/{{host}}/disko.nix
 
 install host: (format-disk host)
   sudo nixos-install --no-root-passwd --flake .#{{host}}

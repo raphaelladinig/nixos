@@ -12,7 +12,7 @@ in
 
   users.users.raphael = {
     isNormalUser = true;
-    hashedPassword = "$y$j9T$0S8dScjAcf4KywNEGa7271$wUYa5b5xXQCCj4SwEbpJGCGXAVCPRV0q0XoCo2gc4W9";
+    hashedPassword = "$y$j9T$LNf51i/bvjXZ0fm3BoE5q.$hcKqkWMfP2B/PL8qwjcGfUpKoNVQk5/hP/hJ/7G4D./";
     extraGroups =
       [ "wheel" ]
       ++ ifGroupExists [

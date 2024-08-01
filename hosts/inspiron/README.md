@@ -27,4 +27,7 @@ nix-shell
 just install inspiron
 ```
 
-4. Boot in to the new system, change the passwords of each user and pull over your data.
+4. Boot in to the new system:
+  - change the passwords of users
+  - pull over your data.
+  - rebuild the system again (for os-prober)

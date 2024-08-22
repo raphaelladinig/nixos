@@ -1,0 +1,11 @@
+$border-color: transparentize($fg, 0.8);
+$margin: 0.3em;
+$padding: 0.5em;
+$radius: 0.2em;
+
+* {
+  all: unset;
+  font-family: $font;
+  font-size: $font-size;
+  color: $fg;
+}

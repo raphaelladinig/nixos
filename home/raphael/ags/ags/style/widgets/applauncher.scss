@@ -1,0 +1,29 @@
+window#applauncher .applauncher {
+  background-color: transparentize($bg, 0.05);
+  padding-bottom: $padding;
+  border: 0.2em solid $border-color;
+  border-radius: $radius * 2;
+
+  .search {
+    padding: $padding * 1.5;
+    font-size: 1.5em;
+    border-bottom: 0.1em solid $border-color;
+  }
+
+  .scrollable {
+    min-width: 50em;
+    min-height: 30em;
+    .list {
+      .appItem {
+        @include button;
+        .icon {
+          @include icon;
+        }
+        .title {
+          font-size: 1.2em;
+          margin: $margin * 2;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "policies": {
+    "AppAutoUpdate": false,
+    "AutofillAddressEnabled": false,
+    "AutofillCreditCardEnabled": false,
+    "DisableAppUpdate": true,
+    "DisableFeedbackCommands": true,
+    "DisableFirefoxAccounts": true,
+    "DisableFirefoxStudies": true,
+    "DisablePocket": true,
+    "DisableSetDesktopBackground": true,
+    "DisableTelemetry": true,
+    "DontCheckDefaultBrowser": true,
+    "DownloadDirectory": "${HOME}/Downloads",
+    "Extensions": {
+      "Install": [
+        "https://addons.mozilla.org/firefox/downloads/file/4328681/ublock_origin-1.59.0.xpi"
+      ]
+    },
+    "Homepage": {
+      "StartPage": "none"
+    },
+    "NewTabPage": false,
+    "NoDefaultBookmarks": true,
+    "PasswordManagerEnabled": false,
+    "PromptForDownloadLocation": true,
+    "TranslateEnabled": false,
+    "UserMessaging": {
+      "ExtensionRecommendations": false,
+      "FeatureRecommendations": false,
+      "UrlbarInterventions": false,
+      "SkipOnboarding": true,
+      "MoreFromMozilla": false,
+      "FirefoxLabs": false
+    }
+  }
+}

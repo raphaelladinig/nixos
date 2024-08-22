@@ -1,0 +1,23 @@
+keys:
+  - &age_raphael age1ayj3xanv4akuxyv2ekcqu3xlhvfrv3qms2fn7nw2nft2p2h92cfsqsm230
+creation_rules:
+  - path_regex: hosts/common/users/raphael/secrets/password_raphael$
+    key_groups:
+    - age:
+      - *age_raphael
+  - path_regex: hosts/common/users/root/secrets/password_root$
+    key_groups:
+    - age:
+      - *age_raphael
+  - path_regex: hosts/inspiron/secrets/Cristallo.nmconnection$
+    key_groups:
+    - age:
+      - *age_raphael
+  - path_regex: hosts/inspiron/secrets/HTLinn.nmconnection$
+    key_groups:
+    - age:
+      - *age_raphael
+  - path_regex: home/raphael/secrets/age_raphael$
+    key_groups:
+    - age:
+      - *age_raphael

@@ -1,0 +1,29 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$character
+"""
+
+add_newline = false
+
+[character]
+success_symbol = "[>](green)"
+error_symbol = "[>](red)"
+vimcmd_symbol = "[<](green)"
+
+[directory]
+format = "[$path ](blue)"
+truncate_to_repo = false
+truncation_length = 5
+truncation_symbol = ".../"
+
+[git_branch]
+symbol = ""
+
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"

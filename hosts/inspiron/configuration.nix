@@ -1,0 +1,42 @@
+{ inputs, ... }:
+
+{
+  imports = [
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.home-manager
+    inputs.disko.nixosModules.disko
+    ./disko.nix
+    inputs.impermanence.nixosModules.impermanence
+    ./impermanence.nix
+    inputs.sops-nix.nixosModules.sops
+    ./sops.nix
+    ../common/users/raphael
+    ../common/users/root
+    ../common/yubikey.nix
+    ../common/ssh.nix
+    ../common/audio.nix
+    ../common/sudo.nix
+    ../common/usb.nix
+    ../common/hyprland.nix
+    ../common/greetd.nix
+    ../common/bluetooth.nix
+    (import ../common/system-config.nix {
+      locale = "en_US.UTF-8";
+      timezone = "Europe/Vienna";
+    })
+    ./network
+    ../common/virtualisation.nix
+    ../common/power-management.nix
+  ];
+
+  boot.loader.grub = {
+    enable = true;
+    device = "nodev";
+    useOSProber = true;
+    efiSupport = true;
+  };
+
+  networking.hostName = "inspiron";
+
+  system.stateVersion = "24.11";
+}

@@ -1,0 +1,39 @@
+.notification {
+  min-width: 23em;
+  background-color: $bg;
+  padding: 1em;
+  margin: 0.5em;
+  border: 0.2em solid $border-color;
+  border-radius: $radius * 2;
+
+  .icon {
+    @include icon;
+    margin-right: 0.75em;
+  }
+
+  .title {
+    color: $fg;
+    font-size: 1.4em;
+  }
+
+  .body {
+    color: transparentize($fg, 0.4);
+  }
+
+  .actions {
+    .action-button {
+      @include button(lighten($bg, 10%));
+      border-radius: $radius;
+      padding: 0.5em;
+      margin: 0.5em 0.5em 0em 0.5em;
+    }
+
+    .action-button:first-child {
+      margin-left: 0;
+    }
+
+    .action-button:last-child {
+      margin-right: 0;
+    }
+  }
+}

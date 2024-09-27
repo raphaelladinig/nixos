@@ -43,5 +43,6 @@
     glow
     unzip
     home-manager
+    nasm
   ];
 }

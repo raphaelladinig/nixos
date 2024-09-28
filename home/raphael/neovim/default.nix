@@ -8,6 +8,7 @@
     ./languages/nix
     ./languages/cpp
     ./languages/c
+    ./languages/asm
     ./languages/javascript
     ./languages/typescript
     ./languages/markdown

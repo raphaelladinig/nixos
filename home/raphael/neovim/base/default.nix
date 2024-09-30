@@ -1,7 +1,6 @@
 {
   imports = [
     ../plugins/toggleterm
-    ../plugins/overseer
     ../plugins/trouble
     ../plugins/fidget
     ../plugins/oil

@@ -6,7 +6,6 @@
     ../plugins/oil
     ../plugins/lualine
     ../plugins/telescope
-    ../plugins/dressing
     ../plugins/todo-comments
     ../plugins/comment
     ../plugins/neotest

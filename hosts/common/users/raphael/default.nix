@@ -8,6 +8,7 @@
     ../../network.nix
     ../../virtualisation.nix
     ../../home-manager.nix
+    ../../platformio.nix
   ];
 
   sops.secrets.password_raphael = {

@@ -54,6 +54,7 @@
         "Virtual-Machines"
         ".ssh"
         ".zen"
+        ".platformio"
         # ".config/github-copilot"
         ".local/share/gopass"
         ".local/share/nvim"

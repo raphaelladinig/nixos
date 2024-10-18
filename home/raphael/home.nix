@@ -9,10 +9,10 @@
     ../common/nixpkgs
     inputs.sops-nix.homeManagerModules.sops
     ./sops.nix
+    ./virtualisation.nix
     ./ssh
     ./gopass
     ./git.nix
-    ./virt-manager.nix
     ./mpv
     ./hyprland
     ./zsh

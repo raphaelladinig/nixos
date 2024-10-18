@@ -6,9 +6,17 @@
 {
   imports = [
     ../../network.nix
-    ../../virtualisation.nix
     ../../home-manager.nix
+    ../../yubikey.nix
     ../../school.nix
+    ../../yubikey.nix
+    ../../ssh.nix
+    ../../audio.nix
+    ../../sudo.nix
+    ../../usb.nix
+    ../../hyprland.nix
+    ../../greetd.nix
+    ../../bluetooth.nix
   ];
 
   sops.secrets.password_raphael = {
@@ -26,7 +34,6 @@
       "audio"
       "input"
       "networkmanager"
-      "libvirtd"
     ];
 
     shell = pkgs.zsh;

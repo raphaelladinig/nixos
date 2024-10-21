@@ -8,6 +8,7 @@ let
       with pkgs.dotnetCorePackages;
       combinePackages [
         sdk_8_0
+        sdk_6_0
       ]
     ).overrideAttrs
       (

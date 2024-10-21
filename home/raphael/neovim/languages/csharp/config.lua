@@ -1,6 +1,6 @@
 require("conform").setup({
   formatters_by_ft = {
-    csharp = { "csharpier" },
+    cs = { "csharpier" },
   },
 })
 

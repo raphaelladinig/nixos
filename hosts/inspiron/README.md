@@ -31,7 +31,6 @@ just install inspiron
 
 - deploy ssh key for raphael (sops)
 - rebuild the system again (os-prober)
-- syncronise your data
 
 ```sh
 git clone git@github.com:raphaelladinig/zettelkasten.git

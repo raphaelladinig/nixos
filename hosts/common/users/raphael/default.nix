@@ -60,6 +60,7 @@
         ".android"
         ".java"
         ".jdks"
+        ".gradle"
         ".zen"
         ".ssh"
         ".platformio"

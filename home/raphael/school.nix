@@ -36,4 +36,9 @@ in
     dotnet
     android-studio
   ];
+
+  home.sessionVariables = {
+    DOTNET_ROOT = dotnet;
+    PATH = "$PATH:/home/raphael/.dotnet/tools";
+  };
 }

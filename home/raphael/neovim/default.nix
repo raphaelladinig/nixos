@@ -1,7 +1,7 @@
 {
   imports = [
     ./base
-    # ./ai
+    ./ai
     ./git
     ./languages/python
     ./languages/lua

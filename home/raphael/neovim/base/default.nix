@@ -1,6 +1,9 @@
 {
   imports = [
     ../plugins/toggleterm
+    ../plugins/dressing
+    ../plugins/render-markdown
+    ../plugins/img-clip
     ../plugins/trouble
     ../plugins/fidget
     ../plugins/oil

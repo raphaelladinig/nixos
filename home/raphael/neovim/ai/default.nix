@@ -1,5 +1,5 @@
 {
   imports = [
-    ../plugins/copilot
+    ../plugins/avante
   ];
 }

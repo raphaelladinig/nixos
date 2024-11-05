@@ -5,6 +5,5 @@ require("copilot").setup({
       next = "<C-j>",
       prev = "<C-k>",
     },
-    auto_trigger = true,
   },
 })

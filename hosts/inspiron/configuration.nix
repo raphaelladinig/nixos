@@ -19,6 +19,7 @@
     })
     ./network
     ../common/power-management.nix
+    ../common/logind.nix
   ];
 
   boot.loader.grub = {

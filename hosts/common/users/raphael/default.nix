@@ -73,6 +73,7 @@
         ".local/share/Google"
         ".local/state/lazygit"
         ".local/share/direnv"
+        ".local/state/wireplumber"
       ];
       files = [
         ".zsh_history"

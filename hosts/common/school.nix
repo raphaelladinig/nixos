@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
 {
-  services.udev.packages = with pkgs; [ platformio-core ];
+  services.udev.packages = with pkgs; [
+    platformio-core.udev
+  ];
 
   services.mysql = {
     enable = true;
@@ -9,6 +11,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    platformio-core
+    platformio
   ];
 }

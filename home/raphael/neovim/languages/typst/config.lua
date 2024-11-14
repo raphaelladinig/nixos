@@ -14,6 +14,10 @@ lspconfig.tinymist.setup({
   root_dir = function()
     return vim.fn.getcwd()
   end,
+  settings = {
+    exportPdf = "onType",
+    outputPath = "$root/$dir/$name",
+  },
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {

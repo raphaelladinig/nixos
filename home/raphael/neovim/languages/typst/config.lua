@@ -16,7 +16,7 @@ lspconfig.tinymist.setup({
   end,
   settings = {
     exportPdf = "onType",
-    outputPath = "$root/$dir/$name",
+    outputPath = "$root/target/$dir/$name",
   },
 })
 

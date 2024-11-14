@@ -46,5 +46,6 @@
     zip
     home-manager
     nasm
+    zathura
   ];
 }

@@ -11,13 +11,7 @@ capabilities = require("cmp_nvim_lsp").default_capabilities()
 lspconfig.tinymist.setup({
   capabilities = capabilities,
   offset_encoding = "utf-8",
-  root_dir = function()
-    return vim.fn.getcwd()
-  end,
-  settings = {
-    exportPdf = "onType",
-    outputPath = "$root/target/$dir/$name",
-  },
+  root_dir = vim.fn.getcwd(),
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {

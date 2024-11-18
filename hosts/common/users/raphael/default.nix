@@ -65,6 +65,7 @@
         ".ssh"
         ".platformio"
         ".dotnet"
+        ".nuget"
         ".config/Google"
         ".config/github-copilot"
         ".local/share/gopass"

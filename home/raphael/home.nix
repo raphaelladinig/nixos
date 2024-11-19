@@ -11,6 +11,7 @@
     ./sops.nix
     ./virtualisation.nix
     ./ssh
+    ./zathura
     ./gopass
     ./git.nix
     ./mpv
@@ -46,6 +47,5 @@
     zip
     home-manager
     nasm
-    zathura
   ];
 }

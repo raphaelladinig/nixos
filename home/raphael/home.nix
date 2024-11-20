@@ -46,6 +46,5 @@
     unzip
     zip
     home-manager
-    nasm
   ];
 }

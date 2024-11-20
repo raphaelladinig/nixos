@@ -1,6 +1,6 @@
 {
   imports = [
     ../plugins/gitsigns
-    ../plugins/neogit
+    ../plugins/diffview
   ];
 }

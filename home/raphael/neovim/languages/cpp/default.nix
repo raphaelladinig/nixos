@@ -3,7 +3,6 @@
   imports = [
     ../../plugins/nvim-lspconfig
     ../../plugins/conform
-    ../../plugins/nvim-dap
   ];
 
   programs.neovim = {
@@ -15,6 +14,6 @@
   home.packages = with pkgs; [
     clang-tools
     clang
-    gdb
+    lldb
   ];
 }

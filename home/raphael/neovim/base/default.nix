@@ -1,6 +1,5 @@
 {
   imports = [
-    ../plugins/toggleterm
     ../plugins/dressing
     ../plugins/render-markdown
     ../plugins/img-clip
@@ -11,11 +10,8 @@
     ../plugins/telescope
     ../plugins/todo-comments
     ../plugins/comment
-    ../plugins/neotest
     ../plugins/conform
     ../plugins/nvim-lint
-    ../plugins/nvim-dap
-    ../plugins/sniprun
     ../plugins/nvim-lspconfig
     ../plugins/nvim-cmp
     ../plugins/nvim-surround

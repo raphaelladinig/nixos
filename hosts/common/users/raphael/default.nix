@@ -17,6 +17,7 @@
     ../../hyprland.nix
     ../../greetd.nix
     ../../bluetooth.nix
+    ../../printing.nix
   ];
 
   sops.secrets.password_raphael = {

@@ -46,5 +46,6 @@
     unzip
     zip
     home-manager
+    pnpm
   ];
 }

@@ -12,6 +12,6 @@
     bun
     sassc
     xdg-terminal-exec
-    nerdfonts
+    nerd-fonts.caskaydia-cove
   ];
 }

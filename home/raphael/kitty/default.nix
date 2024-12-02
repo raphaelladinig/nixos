@@ -6,6 +6,6 @@
 
   home.packages = with pkgs; [
     kitty
-    nerdfonts
+    nerd-fonts.caskaydia-cove
   ];
 }

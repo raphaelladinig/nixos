@@ -13,6 +13,6 @@
 
   home.packages = with pkgs; [
     vscode-langservers-extracted
-    prettierd
+    nodePackages.prettier
   ];
 }

@@ -20,6 +20,7 @@
     ./languages/xml
     ./languages/typst
     ./languages/svelte
+    ./languages/tailwindcss
   ];
 
   programs.neovim.enable = true;

@@ -19,6 +19,7 @@
     ./languages/json
     ./languages/xml
     ./languages/typst
+    ./languages/svelte
   ];
 
   programs.neovim.enable = true;

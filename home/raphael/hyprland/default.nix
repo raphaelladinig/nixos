@@ -12,6 +12,7 @@
     cliphist
     wl-clipboard
     hyprlock
+    brave
   ];
 
   gtk = {
@@ -34,6 +35,5 @@
     ../ags
     ../swappy
     ../kitty
-    ../zen-browser
   ];
 }

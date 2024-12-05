@@ -5,7 +5,7 @@
 
 # Installing
 
-1. Clone the flake:
+1. Clone:
 
 ```sh
 git clone https://github.com/raphaelladinig/nixos
@@ -21,16 +21,16 @@ cd nixos
 nix-shell
 ```
 
-3. Install the flake:
+3. Install:
 
 ```sh
 just install inspiron
 ```
 
-4. Boot in to the new system:
+4. Boot:
 
 - deploy ssh key for raphael (sops)
-- rebuild the system again (os-prober)
+- rebuild gain (os-prober)
 
 ```sh
 git clone git@github.com:raphaelladinig/zettelkasten.git
@@ -39,3 +39,5 @@ git clone git@github.com:raphaelladinig/zettelkasten.git
 ```sh
 gopass clone git@github.com:raphaelladinig/password-store.git
 ```
+
+- move data over

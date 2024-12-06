@@ -47,5 +47,6 @@
     zip
     home-manager
     pnpm
+    sqlite
   ];
 }

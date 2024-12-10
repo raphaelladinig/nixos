@@ -3,7 +3,6 @@
     ../plugins/dressing
     ../plugins/render-markdown
     ../plugins/img-clip
-    ../plugins/trouble
     ../plugins/fidget
     ../plugins/oil
     ../plugins/lualine

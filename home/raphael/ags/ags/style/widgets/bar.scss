@@ -1,0 +1,64 @@
+.bar {
+  background-color: $bg;
+  font-weight: bold;
+
+  .left,
+  .middle,
+  .right {
+    @include button;
+    padding: $padding * 0.5;
+    border-radius: $radius * 2;
+    margin: $margin * 0.4;
+  }
+
+  .left {
+    margin-left: $margin;
+  }
+
+  .right {
+    margin-right: $margin;
+  }
+
+  .workspaces {
+    margin: 0 $margin;
+    label {
+      font-size: $font-size * 0.075;
+      min-width: 5em;
+      min-height: 5em;
+      border-radius: $radius * 20;
+      margin: 0 $margin * 10;
+      background-color: transparentize($fg, 0.8);
+      transition: 100ms;
+
+      &.occupied {
+        background-color: transparentize($fg, 0.4);
+        min-width: 7em;
+        min-height: 7em;
+      }
+
+      &.active {
+        background-color: $fg;
+        min-width: 20em;
+        min-height: 12em;
+      }
+    }
+  }
+
+  .notifications {
+    transition: 100ms;
+  }
+
+  .date,
+  .notifications,
+  .bluetooth,
+  .network,
+  .microphone,
+  .speakers,
+  .battery {
+    margin: 0 $margin * 1.5;
+    label,
+    image {
+      margin: 0 $margin;
+    }
+  }
+}

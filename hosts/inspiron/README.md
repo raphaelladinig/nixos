@@ -1,18 +1,23 @@
 # Description
 
 - Dell Inspiron 15 5515
-- LUKS + Impermanence
+- LUKS2 + Impermanence
+
+# Prerequisites
+
+- ssh key for nix-secrets
+- /tmp/disk.key for luks2 encryption password
 
 # Installing
 
-1. Clone:
+1. Clone nix-config:
 
 ```sh
-git clone https://github.com/raphaelladinig/nixos
+git clone https://github.com/raphaelladinig/nix-config
 ```
 
 ```sh
-cd nixos
+cd nix-config
 ```
 
 2. Enter the nix-shell:
@@ -23,23 +28,12 @@ nix-shell
 
 3. Install:
 
-- get ssh key for nix-secrets
-
 ```sh
 just install inspiron
 ```
 
-4. Boot:
+4. Post-Install:
 
-- get age keys for sops
-- rebuild again (os-prober)
-
-```sh
-git clone git@github.com:raphaelladinig/zettelkasten.git
-```
-
-```sh
-gopass clone git@github.com:raphaelladinig/password-store.git
-```
-
+- place age keys for sops in correct locations
+- rebuild again
 - move data over

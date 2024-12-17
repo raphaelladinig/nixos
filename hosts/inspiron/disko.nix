@@ -22,10 +22,10 @@
               type = "luks";
               name = "crypted";
               settings = {
-                preLVM = true;
-                allowDiscards = true;
+                keyFile = "/tmp/disk.key";
                 crypttabExtraOpts = [
                   "fido2-device=auto"
+                  "token-timeout=10"
                 ];
               };
               content = {

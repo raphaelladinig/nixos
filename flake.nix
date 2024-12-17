@@ -73,7 +73,7 @@
           specialArgs = {
             inherit inputs outputs;
           };
-          modules = [ ./hosts/inspiron/configuration.nix ];
+          modules = [ ./hosts/inspiron ];
         };
       };
 
@@ -84,7 +84,7 @@
             inherit inputs outputs;
           };
           modules = [
-            ./home/raphael/home.nix
+            ./home/raphael
           ];
         };
       };

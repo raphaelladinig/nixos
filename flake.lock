@@ -58,10 +58,10 @@
     "nix-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1734454488,
+        "lastModified": 1734454753,
         "narHash": "sha256-zifZx+bUCcr7KdLUdg69y+hs5JkFBk0tVc87hoqJNjg=",
         "ref": "main",
-        "rev": "a48c8bb26ea3f0e76dd4b48c27a09781eb3e20a5",
+        "rev": "d2d3e05542368159cebc20182dec772735d70973",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/raphaelladinig/nix-secrets.git"

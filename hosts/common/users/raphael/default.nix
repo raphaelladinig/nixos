@@ -58,7 +58,7 @@ in
     };
   };
 
-  home-manager.users.raphael = import ../../../../home/raphael/home.nix;
+  home-manager.users.raphael = import ../../../../home/raphael;
 
   environment.persistence."/persist" = {
     users.raphael = {

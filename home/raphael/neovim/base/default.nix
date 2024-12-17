@@ -4,7 +4,7 @@
     ../plugins/render-markdown
     ../plugins/img-clip
     ../plugins/fidget
-    ../plugins/nvim-tree
+    ../plugins/oil
     ../plugins/lualine
     ../plugins/telescope
     ../plugins/todo-comments

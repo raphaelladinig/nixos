@@ -35,5 +35,5 @@ just install inspiron
 
 - place age keys for sops in correct locations
 - rebuild again (os-prober & sops)
-- configure disk for yubikey decryption
+- configure disk for yubikey fido2 decryption
 - move data over

@@ -35,5 +35,5 @@ just install inspiron
 4. Post-Install:
 
 - place age keys for sops in correct locations
-- rebuild again
+- rebuild again (os-prober & sops)
 - move data over

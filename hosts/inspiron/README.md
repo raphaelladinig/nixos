@@ -11,7 +11,6 @@
 # Installing
 
 1. Clone nix-config:
-
 ```sh
 git clone https://github.com/raphaelladinig/nix-config
 ```
@@ -36,4 +35,5 @@ just install inspiron
 
 - place age keys for sops in correct locations
 - rebuild again (os-prober & sops)
+- configure disk for yubikey decryption
 - move data over

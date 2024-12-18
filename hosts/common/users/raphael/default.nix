@@ -21,6 +21,7 @@ in
     ../../greetd.nix
     ../../bluetooth.nix
     ../../printing.nix
+    ../../ssh
   ];
 
   sops.secrets.password_raphael = {
@@ -38,6 +39,10 @@ in
       "audio"
       "input"
       "networkmanager"
+    ];
+
+    openssh.authorizedKeys.keyFiles = [
+      ../../ssh/id_raphael.pub
     ];
 
     shell = pkgs.zsh;

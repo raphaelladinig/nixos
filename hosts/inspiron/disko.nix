@@ -23,6 +23,7 @@
               name = "crypted";
               settings = {
                 keyFile = "/tmp/disk.key";
+                bypassWorkqueues = true;
                 crypttabExtraOpts = [
                   "fido2-device=auto"
                   "token-timeout=10"
